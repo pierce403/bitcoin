@@ -4,16 +4,16 @@ AM_CPPFLAGS =  $(INCLUDES) -I$(top_builddir)/src/obj \
   -I$(builddir) $(BOOST_INCLUDES) $(BDB_CPPFLAGS)
 AM_LDFLAGS = $(PTHREAD_CFLAGS)
 
-noinst_LIBRARIES = libbitcoin.a
+noinst_LIBRARIES = libhydracoin.a
 
-bin_PROGRAMS = bitcoind bitcoin-cli
+bin_PROGRAMS = hydracoind hydracoin-cli
 
 SUBDIRS = . $(BUILD_QT) $(BUILD_TEST)
 DIST_SUBDIRS = . qt test
 .PHONY: FORCE
-# bitcoin core #
+# hydracoin core #
 BITCOIN_CORE_H = addrman.h alert.h allocators.h base58.h bignum.h \
-  bitcoinrpc.h bloom.h chainparams.h checkpoints.h checkqueue.h \
+  hydracoinrpc.h bloom.h chainparams.h checkpoints.h checkqueue.h \
   clientversion.h compat.h core.h crypter.h db.h hash.h init.h \
   key.h keystore.h leveldb.h limitedmap.h main.h miner.h mruset.h \
   netbase.h net.h protocol.h script.h serialize.h sync.h threadsafety.h \
@@ -31,7 +31,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 version.o: obj/build.h
 
-libbitcoin_a_SOURCES = addrman.cpp alert.cpp allocators.cpp bitcoinrpc.cpp bloom.cpp \
+libhydracoin_a_SOURCES = addrman.cpp alert.cpp allocators.cpp hydracoinrpc.cpp bloom.cpp \
   chainparams.cpp checkpoints.cpp core.cpp crypter.cpp db.cpp hash.cpp \
   init.cpp key.cpp keystore.cpp leveldb.cpp main.cpp miner.cpp \
   netbase.cpp net.cpp noui.cpp protocol.cpp rpcblockchain.cpp rpcdump.cpp \
@@ -39,32 +39,32 @@ libbitcoin_a_SOURCES = addrman.cpp alert.cpp allocators.cpp bitcoinrpc.cpp bloom
   sync.cpp txdb.cpp txmempool.cpp util.cpp version.cpp wallet.cpp walletdb.cpp $(JSON_H) \
   $(BITCOIN_CORE_H)
 
-nodist_libbitcoin_a_SOURCES = $(top_srcdir)/src/obj/build.h
+nodist_libhydracoin_a_SOURCES = $(top_srcdir)/src/obj/build.h
 #
 
-# bitcoind binary #
-bitcoind_LDADD = libbitcoin.a leveldb/libleveldb.a leveldb/libmemenv.a \
+# hydracoind binary #
+hydracoind_LDADD = libhydracoin.a leveldb/libleveldb.a leveldb/libmemenv.a \
   $(BOOST_LIBS)
-bitcoind_SOURCES = bitcoind.cpp
+hydracoind_SOURCES = hydracoind.cpp
 #
 
 if TARGET_WINDOWS
-bitcoind_SOURCES += bitcoind-res.rc
+hydracoind_SOURCES += hydracoind-res.rc
 endif
 
 AM_CPPFLAGS += $(BDB_CPPFLAGS)
-bitcoind_LDADD += $(BDB_LIBS)
+hydracoind_LDADD += $(BDB_LIBS)
 
-# bitcoin-cli binary #
-bitcoin_cli_LDADD = libbitcoin.a leveldb/libleveldb.a leveldb/libmemenv.a \
+# hydracoin-cli binary #
+hydracoin_cli_LDADD = libhydracoin.a leveldb/libleveldb.a leveldb/libmemenv.a \
   $(BOOST_LIBS)
-bitcoin_cli_SOURCES = bitcoin-cli.cpp
+hydracoin_cli_SOURCES = hydracoin-cli.cpp
 #
 
 if TARGET_WINDOWS
-bitcoin_cli_SOURCES += bitcoin-cli-res.rc
+hydracoin_cli_SOURCES += hydracoin-cli-res.rc
 endif
-bitcoin_cli_LDADD += $(BDB_LIBS)
+hydracoin_cli_LDADD += $(BDB_LIBS)
 
 leveldb/libleveldb.a: leveldb/libmemenv.a
 
@@ -73,7 +73,7 @@ leveldb/%.a:
 	  CC="$(CC)" PLATFORM=$(TARGET_OS) AR="$(AR)" $(LEVELDB_TARGET_FLAGS) \
 	  OPT="$(CXXFLAGS) $(CPPFLAGS)"
 
-qt/bitcoinstrings.cpp: $(libbitcoin_a_SOURCES)
+qt/hydracoinstrings.cpp: $(libhydracoin_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	@cd $(top_srcdir); XGETTEXT=$(XGETTEXT) share/qt/extract_strings_qt.py
 

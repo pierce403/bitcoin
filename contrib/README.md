@@ -20,8 +20,8 @@ Repository Tools
 ---------------------
 
 ### [Debian](/contrib/debian) ###
-Contains files used to package bitcoind/bitcoin-qt
-for Debian-based Linux systems. If you compile bitcoind/bitcoin-qt yourself, there are some useful files here.
+Contains files used to package hydracoind/hydracoin-qt
+for Debian-based Linux systems. If you compile hydracoind/hydracoin-qt yourself, there are some useful files here.
 
 ### [Gitian-descriptors](/contrib/gitian-descriptors) ###
 Gavin's notes on getting gitian builds up and running using KVM.
@@ -37,7 +37,7 @@ Scripts and notes for Mac builds.
 
 ### [Qos](/contrib/qos) ###
 
-A Linux bash script that will set up tc to limit the outgoing bandwidth for connections to the Bitcoin network. This means one can have an always-on bitcoind instance running, and another local bitcoind/bitcoin-qt instance which connects to this node and receives blocks from it.
+A Linux bash script that will set up tc to limit the outgoing bandwidth for connections to the Bitcoin network. This means one can have an always-on hydracoind instance running, and another local hydracoind/hydracoin-qt instance which connects to this node and receives blocks from it.
 
 ### [Seeds](/contrib/seeds) ###
 Utility to generate the pnSeed[] array that is compiled into the client.

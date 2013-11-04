@@ -1,5 +1,5 @@
 ---
-name: "bitcoin"
+name: "hydracoin"
 suites:
 - "lucid"
 architectures:
@@ -26,8 +26,8 @@ packages:
 - "bsdmainutils"
 reference_datetime: "2013-06-01 00:00:00"
 remotes:
-- "url": "https://github.com/bitcoin/bitcoin.git"
-  "dir": "bitcoin"
+- "url": "https://github.com/hydracoin/hydracoin.git"
+  "dir": "hydracoin"
 files:
 - "miniupnpc-1.6.tar.gz"
 - "qrencode-3.2.0.tar.bz2"
@@ -55,16 +55,16 @@ script: |
   make $MAKEOPTS install
   cd ..
   #
-  cd bitcoin
+  cd hydracoin
   export TAR_OPTIONS=--mtime=`echo $REFERENCE_DATETIME | awk '{ print $1 }'`
   ./autogen.sh
-  ./configure --prefix=$STAGING --bindir=$OUTDIR --with-protoc-bindir=$STAGING/host/bin --disable-maintainer-mode --disable-dependency-tracking PKG_CONFIG_PATH="$STAGING/lib/pkgconfig" CPPFLAGS="-I$STAGING/include" LDFLAGS="-L$STAGING/lib" CXXFLAGS="-frandom-seed=bitcoin"
+  ./configure --prefix=$STAGING --bindir=$OUTDIR --with-protoc-bindir=$STAGING/host/bin --disable-maintainer-mode --disable-dependency-tracking PKG_CONFIG_PATH="$STAGING/lib/pkgconfig" CPPFLAGS="-I$STAGING/include" LDFLAGS="-L$STAGING/lib" CXXFLAGS="-frandom-seed=hydracoin"
   make dist
   mkdir -p distsrc
   cd distsrc
-  tar --strip-components=1 -xf ../bitcoin-*.tar.*
-  ./configure --prefix=$STAGING --bindir=$OUTDIR --with-protoc-bindir=$STAGING/host/bin --disable-maintainer-mode --disable-dependency-tracking PKG_CONFIG_PATH="$STAGING/lib/pkgconfig" CPPFLAGS="-I$STAGING/include" LDFLAGS="-L$STAGING/lib" CXXFLAGS="-frandom-seed=bitcoin"
+  tar --strip-components=1 -xf ../hydracoin-*.tar.*
+  ./configure --prefix=$STAGING --bindir=$OUTDIR --with-protoc-bindir=$STAGING/host/bin --disable-maintainer-mode --disable-dependency-tracking PKG_CONFIG_PATH="$STAGING/lib/pkgconfig" CPPFLAGS="-I$STAGING/include" LDFLAGS="-L$STAGING/lib" CXXFLAGS="-frandom-seed=hydracoin"
   make $MAKEOPTS
   make $MAKEOPTS install-strip
   mkdir -p $OUTDIR/src
-  cp ../bitcoin-*.tar.* $OUTDIR/src
+  cp ../hydracoin-*.tar.* $OUTDIR/src

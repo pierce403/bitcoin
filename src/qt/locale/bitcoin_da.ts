@@ -122,7 +122,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Disse er dine Bitcoin-adresser for at sende betalinger. Tjek altid beløb og modtageradresse, inden du sender bitcoins.</translation>
+        <translation>Disse er dine Bitcoin-adresser for at sende betalinger. Tjek altid beløb og modtageradresse, inden du sender hydracoins.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -137,7 +137,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     <message>
         <location line="+1"/>
         <source>Send &amp;Coins</source>
-        <translation>Send bitcoins</translation>
+        <translation>Send hydracoins</translation>
     </message>
     <message>
         <location line="+265"/>
@@ -274,8 +274,8 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin vil nu lukke for at gennemføre krypteringsprocessen. Husk på, at kryptering af din tegnebog vil ikke beskytte dine bitcoins fuldt ud mod at blive stjålet af malware på din computer.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin vil nu lukke for at gennemføre krypteringsprocessen. Husk på, at kryptering af din tegnebog vil ikke beskytte dine hydracoins fuldt ud mod at blive stjålet af malware på din computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -322,7 +322,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Underskriv besked...</translation>
     </message>
@@ -419,7 +419,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     <message>
         <location line="-319"/>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Send bitcoins til en Bitcoin-adresse</translation>
+        <translation>Send hydracoins til en Bitcoin-adresse</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -674,7 +674,7 @@ Adresse: %4
         <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>Der opstod en fatal fejl. Bitcoin kan ikke længere fortsætte sikkert og vil afslutte.</translation>
     </message>
@@ -1025,7 +1025,7 @@ Adresse: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Vælg den standard underopdelingsenhed, som skal vises i brugergrænsefladen og ved afsendelse af bitcoins.</translation>
+        <translation>Vælg den standard underopdelingsenhed, som skal vises i brugergrænsefladen og ved afsendelse af hydracoins.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1164,14 +1164,14 @@ Adresse: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Kan ikke starte bitcoin: click-to-pay-håndtering</translation>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
+        <translation>Kan ikke starte hydracoin: click-to-pay-håndtering</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -1404,7 +1404,7 @@ Adresse: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Send bitcoins</translation>
+        <translation>Send hydracoins</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -1455,7 +1455,7 @@ Adresse: %4
     <message>
         <location line="+6"/>
         <source>Confirm send coins</source>
-        <translation>Bekræft afsendelse af bitcoins</translation>
+        <translation>Bekræft afsendelse af hydracoins</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1500,7 +1500,7 @@ Adresse: %4
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine bitcoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine bitcoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
+        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine hydracoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine hydracoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
     </message>
 </context>
 <context>
@@ -1899,7 +1899,7 @@ Adresse: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Genererede bitcoins skal vente 120 blokke, før de kan blive brugt. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det mislykkes at komme ind i kæden, vil den skifte til &quot;ikke godkendt&quot; og ikke blive kunne bruges. Dette kan lejlighedsvis ske, hvis en anden knude genererer en blok inden for få sekunder af din.</translation>
+        <translation>Genererede hydracoins skal vente 120 blokke, før de kan blive brugt. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det mislykkes at komme ind i kæden, vil den skifte til &quot;ikke godkendt&quot; og ikke blive kunne bruges. Dette kan lejlighedsvis ske, hvis en anden knude genererer en blok inden for få sekunder af din.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2252,7 +2252,7 @@ Adresse: %4
     <message>
         <location filename="../walletmodel.cpp" line="+193"/>
         <source>Send Coins</source>
-        <translation>Send bitcoins</translation>
+        <translation>Send hydracoins</translation>
     </message>
 </context>
 <context>
@@ -2299,9 +2299,9 @@ Adresse: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoin-version</translation>
     </message>
@@ -2312,8 +2312,8 @@ Adresse: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Send kommando til -server eller bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Send kommando til -server eller hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2332,13 +2332,13 @@ Adresse: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Angiv konfigurationsfil (standard: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Angiv konfigurationsfil (standard: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Angiv pid-fil (default: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Angiv pid-fil (default: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2415,7 +2415,7 @@ Adresse: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2426,7 +2426,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, du skal angive en RPC-adgangskode i konfigurationsfilen:
 %s
 Det anbefales, at du bruger nedenstående, tilfældige adgangskode:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (du behøver ikke huske denne adgangskode)
 Brugernavnet og adgangskode MÅ IKKE være det samme.
@@ -2458,12 +2458,12 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
     <message>
         <location line="+4"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine bitcoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine bitcoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
+        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine hydracoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine hydracoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Fejl: Denne transaktion kræver et transaktionsgebyr på minimum %s pga. dens størrelse, kompleksitet eller anvendelse af nyligt modtagne bitcoins!</translation>
+        <translation>Fejl: Denne transaktion kræver et transaktionsgebyr på minimum %s pga. dens størrelse, kompleksitet eller anvendelse af nyligt modtagne hydracoins!</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2618,7 +2618,7 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>Skrivning af bitcoin-database mislykkedes</translation>
+        <translation>Skrivning af hydracoin-database mislykkedes</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2638,7 +2638,7 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>Generer bitcoins (standard: 0)</translation>
+        <translation>Generer hydracoins (standard: 0)</translation>
     </message>
     <message>
         <location line="+2"/>

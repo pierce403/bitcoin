@@ -1,7 +1,7 @@
-#include "bitcoinamountfield.h"
+#include "hydracoinamountfield.h"
 
 #include "qvaluecombobox.h"
-#include "bitcoinunits.h"
+#include "hydracoinunits.h"
 #include "guiconstants.h"
 
 #include <QApplication>

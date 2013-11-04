@@ -8,7 +8,7 @@ import glob
 import operator
 import os
 
-OUT_CPP="src/qt/bitcoinstrings.cpp"
+OUT_CPP="src/qt/hydracoinstrings.cpp"
 EMPTY=['""']
 
 def parse_po(text):
@@ -65,10 +65,10 @@ f.write("""#include <QtGlobal>
 #define UNUSED
 #endif
 """)
-f.write('static const char UNUSED *bitcoin_strings[] = {\n')
+f.write('static const char UNUSED *hydracoin_strings[] = {\n')
 messages.sort(key=operator.itemgetter(0))
 for (msgid, msgstr) in messages:
     if msgid != EMPTY:
-        f.write('QT_TRANSLATE_NOOP("bitcoin-core", %s),\n' % ('\n'.join(msgid)))
+        f.write('QT_TRANSLATE_NOOP("hydracoin-core", %s),\n' % ('\n'.join(msgid)))
 f.write('};')
 f.close()

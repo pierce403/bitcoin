@@ -5,7 +5,7 @@
 
 #include "util.h"
 #include "init.h"
-#include "bitcoinrpc.h"
+#include "hydracoinrpc.h"
 #include "ui_interface.h" /* for _(...) */
 
 //////////////////////////////////////////////////////////////////////////////
@@ -30,9 +30,9 @@ static bool AppInitRPC(int argc, char* argv[])
         // First part of help message is specific to RPC client
         std::string strUsage = _("Bitcoin RPC client version") + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  bitcoin-cli [options] <command> [params]  " + _("Send command to Bitcoin server") + "\n" +
-              "  bitcoin-cli [options] help                " + _("List commands") + "\n" +
-              "  bitcoin-cli [options] help <command>      " + _("Get help for a command") + "\n";
+              "  hydracoin-cli [options] <command> [params]  " + _("Send command to Bitcoin server") + "\n" +
+              "  hydracoin-cli [options] help                " + _("List commands") + "\n" +
+              "  hydracoin-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
         strUsage += "\n" + HelpMessage(HMM_BITCOIN_CLI);
 

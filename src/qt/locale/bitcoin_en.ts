@@ -276,8 +276,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -324,7 +324,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+250"/>
+        <location filename="../hydracoingui.cpp" line="+250"/>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message...</translation>
     </message>
@@ -527,7 +527,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-177"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and hydracoin: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -697,7 +697,7 @@ Address: %4
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</translation>
     </message>
@@ -1242,7 +1242,7 @@ Address: %4
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+114"/>
+        <location filename="../hydracoin.cpp" line="+114"/>
         <location line="+5"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
@@ -2582,9 +2582,9 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+102"/>
+        <location filename="../hydracoinstrings.cpp" line="+102"/>
         <source>Bitcoin version</source>
         <translation>Bitcoin version</translation>
     </message>
@@ -2610,13 +2610,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specify configuration file (default: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Specify configuration file (default: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specify pid file (default: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Specify pid file (default: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2693,7 +2693,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2704,7 +2704,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2985,7 +2985,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+12"/>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
+        <source>Usage (deprecated, use hydracoin-cli):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

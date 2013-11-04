@@ -1,8 +1,8 @@
 #include "guiutil.h"
 
-#include "bitcoinaddressvalidator.h"
+#include "hydracoinaddressvalidator.h"
 #include "walletmodel.h"
-#include "bitcoinunits.h"
+#include "hydracoinunits.h"
 
 #include "util.h"
 #include "init.h"
@@ -59,7 +59,7 @@ QString dateTimeStr(qint64 nTime)
     return dateTimeStr(QDateTime::fromTime_t((qint32)nTime));
 }
 
-QFont bitcoinAddressFont()
+QFont hydracoinAddressFont()
 {
     QFont font("Monospace");
     font.setStyleHint(QFont::TypeWriter);
@@ -70,7 +70,7 @@ void setupAddressWidget(QLineEdit *widget, QWidget *parent)
 {
     widget->setMaxLength(BitcoinAddressValidator::MaxAddressLength);
     widget->setValidator(new BitcoinAddressValidator(parent));
-    widget->setFont(bitcoinAddressFont());
+    widget->setFont(hydracoinAddressFont());
 }
 
 void setupAmountWidget(QLineEdit *widget, QWidget *parent)
@@ -84,8 +84,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no bitcoin URI
-    if(!uri.isValid() || uri.scheme() != QString("bitcoin"))
+    // return if URI is not valid or is no hydracoin URI
+    if(!uri.isValid() || uri.scheme() != QString("hydracoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -141,13 +141,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert bitcoin:// to bitcoin:
+    // Convert hydracoin:// to hydracoin:
     //
-    //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because hydracoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("bitcoin://"))
+    if(uri.startsWith("hydracoin://"))
     {
-        uri.replace(0, 10, "bitcoin:");
+        uri.replace(0, 10, "hydracoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -155,7 +155,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("bitcoin:%1").arg(info.address);
+    QString ret = QString("hydracoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -419,7 +419,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "bitcoin.desktop";
+    return GetAutostartDir() / "hydracoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -457,7 +457,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a bitcoin.desktop file to the autostart directory:
+        // Write a hydracoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         optionFile << "Name=Bitcoin\n";
@@ -479,7 +479,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the bitcoin app
+    // loop through the list of startup items and try to find the hydracoin app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -500,21 +500,21 @@ LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef
 
 bool GetStartOnSystemStartup()
 {
-    CFURLRef bitcoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFURLRef hydracoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, hydracoinAppUrl);
     return !!foundItem; // return boolified object
 }
 
 bool SetStartOnSystemStartup(bool fAutoStart)
 {
-    CFURLRef bitcoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFURLRef hydracoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, hydracoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add bitcoin app to startup item list
-        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, bitcoinAppUrl, NULL, NULL);
+        // add hydracoin app to startup item list
+        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, hydracoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {
         // remove item
@@ -558,7 +558,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
     header = tr("Bitcoin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  bitcoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  hydracoin-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage(HMM_BITCOIN_QT));
 

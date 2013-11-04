@@ -7,7 +7,7 @@
 
 #include "wallet.h"
 #include "walletdb.h"
-#include "bitcoinrpc.h"
+#include "hydracoinrpc.h"
 #include "init.h"
 #include "base58.h"
 
@@ -208,7 +208,7 @@ Value setaccount(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "setaccount <bitcoinaddress> <account>\n"
+            "setaccount <hydracoinaddress> <account>\n"
             "Sets the account associated with the given address.");
 
     CBitcoinAddress address(params[0].get_str());
@@ -238,7 +238,7 @@ Value getaccount(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "getaccount <bitcoinaddress>\n"
+            "getaccount <hydracoinaddress>\n"
             "Returns the account associated with the given address.");
 
     CBitcoinAddress address(params[0].get_str());
@@ -278,7 +278,7 @@ Value sendtoaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 4)
         throw runtime_error(
-            "sendtoaddress <bitcoinaddress> <amount> [comment] [comment-to]\n"
+            "sendtoaddress <hydracoinaddress> <amount> [comment] [comment-to]\n"
             "<amount> is a real and is rounded to the nearest 0.00000001"
             + HelpRequiringPassphrase());
 
@@ -341,7 +341,7 @@ Value signmessage(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "signmessage <bitcoinaddress> <message>\n"
+            "signmessage <hydracoinaddress> <message>\n"
             "Sign a message with the private key of an address");
 
     EnsureWalletIsUnlocked();
@@ -376,7 +376,7 @@ Value verifymessage(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 3)
         throw runtime_error(
-            "verifymessage <bitcoinaddress> <signature> <message>\n"
+            "verifymessage <hydracoinaddress> <signature> <message>\n"
             "Verify a signed message");
 
     string strAddress  = params[0].get_str();
@@ -413,8 +413,8 @@ Value getreceivedbyaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "getreceivedbyaddress <bitcoinaddress> [minconf=1]\n"
-            "Returns the total amount received by <bitcoinaddress> in transactions with at least [minconf] confirmations.");
+            "getreceivedbyaddress <hydracoinaddress> [minconf=1]\n"
+            "Returns the total amount received by <hydracoinaddress> in transactions with at least [minconf] confirmations.");
 
     // Bitcoin address
     CBitcoinAddress address = CBitcoinAddress(params[0].get_str());
@@ -622,7 +622,7 @@ Value sendfrom(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 3 || params.size() > 6)
         throw runtime_error(
-            "sendfrom <fromaccount> <tobitcoinaddress> <amount> [minconf=1] [comment] [comment-to]\n"
+            "sendfrom <fromaccount> <tohydracoinaddress> <amount> [minconf=1] [comment] [comment-to]\n"
             "<amount> is a real and is rounded to the nearest 0.00000001"
             + HelpRequiringPassphrase());
 
@@ -806,7 +806,7 @@ Value createmultisig(const Array& params, bool fHelp)
         string msg = "createmultisig <nrequired> <'[\"key\",\"key\"]'>\n"
             "Creates a multi-signature address and returns a json object\n"
             "with keys:\n"
-            "address : bitcoin address\n"
+            "address : hydracoin address\n"
             "redeemScript : hex-encoded redemption script";
         throw runtime_error(msg);
     }
@@ -1462,8 +1462,8 @@ Value validateaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "validateaddress <bitcoinaddress>\n"
-            "Return information about <bitcoinaddress>.");
+            "validateaddress <hydracoinaddress>\n"
+            "Return information about <hydracoinaddress>.");
 
     CBitcoinAddress address(params[0].get_str());
     bool isValid = address.IsValid();

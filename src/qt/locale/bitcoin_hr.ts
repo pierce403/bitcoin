@@ -269,8 +269,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin će se sada zatvoriti kako bi dovršio postupak šifriranja. Zapamtite da šifriranje vašeg novčanika ne može u potpunosti zaštititi vaše bitcoine od krađe preko zloćudnog softvera koji bi bio na vašem računalu.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin će se sada zatvoriti kako bi dovršio postupak šifriranja. Zapamtite da šifriranje vašeg novčanika ne može u potpunosti zaštititi vaše hydracoine od krađe preko zloćudnog softvera koji bi bio na vašem računalu.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -317,7 +317,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Potpišite poruku...</translation>
     </message>
@@ -414,12 +414,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-319"/>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Slanje novca na bitcoin adresu</translation>
+        <translation>Slanje novca na hydracoin adresu</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Promijeni postavke konfiguracije za bitcoin</translation>
+        <translation>Promijeni postavke konfiguracije za hydracoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -669,7 +669,7 @@ Adresa:%4
         <translation>Novčanik je &lt;b&gt;šifriran&lt;/b&gt; i trenutno &lt;b&gt;zaključan&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
@@ -737,7 +737,7 @@ Adresa:%4
     <message>
         <location line="-5"/>
         <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>Upisana adresa &quot;%1&quot; nije valjana bitcoin adresa.</translation>
+        <translation>Upisana adresa &quot;%1&quot; nije valjana hydracoin adresa.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1020,7 +1020,7 @@ Adresa:%4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Izaberite željeni najmanji dio bitcoina koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
+        <translation>Izaberite željeni najmanji dio hydracoina koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1159,14 +1159,14 @@ Adresa:%4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -2294,9 +2294,9 @@ Adresa:%4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoin verzija</translation>
     </message>
@@ -2307,8 +2307,8 @@ Adresa:%4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Pošalji komandu usluzi -server ili bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Pošalji komandu usluzi -server ili hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2327,13 +2327,13 @@ Adresa:%4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Odredi konfiguracijsku datoteku (ugrađeni izbor: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Odredi konfiguracijsku datoteku (ugrađeni izbor: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Odredi proces ID datoteku (ugrađeni izbor: bitcoin.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Odredi proces ID datoteku (ugrađeni izbor: hydracoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2410,7 +2410,7 @@ Adresa:%4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

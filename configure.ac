@@ -6,7 +6,7 @@ define(_CLIENT_VERSION_REVISION, 99)
 define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_IS_RELEASE, false)
 define(_COPYRIGHT_YEAR, 2013)
-AC_INIT([Bitcoin],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[info@bitcoin.org],[bitcoin])
+AC_INIT([Bitcoin],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[info@hydracoin.org],[hydracoin])
 AC_CONFIG_AUX_DIR([src/build-aux])
 AC_CONFIG_MACRO_DIR([src/m4])
 AC_CANONICAL_HOST
@@ -116,7 +116,7 @@ AC_ARG_WITH([protoc-bindir],[AS_HELP_STRING([--with-protoc-bindir=BIN_DIR],[spec
 
 
 AC_CONFIG_SRCDIR([src])
-AC_CONFIG_HEADERS([src/bitcoin-config.h])
+AC_CONFIG_HEADERS([src/hydracoin-config.h])
 
 dnl Checks for programs.
 AC_PROG_CXX
@@ -277,7 +277,7 @@ dnl Check for pthread compile/link requirements
 AX_PTHREAD
 INCLUDES="$INCLUDES $PTHREAD_CFLAGS"
 
-# The following macro will add the necessary defines to bitcoin-config.h, but
+# The following macro will add the necessary defines to hydracoin-config.h, but
 # they also need to be passed down to any subprojects. Pull the results out of
 # the cache and add them to CPPFLAGS.
 AC_SYS_LARGEFILE
@@ -726,6 +726,6 @@ AC_SUBST(BUILD_QT)
 AC_SUBST(BUILD_TEST)
 AC_SUBST(BUILD_TEST_QT)
 AC_CONFIG_FILES([Makefile src/Makefile src/test/Makefile src/qt/Makefile src/qt/test/Makefile share/setup.nsi share/qt/Info.plist])
-AC_CONFIG_FILES([qa/pull-tester/run-bitcoind-for-test.sh],[chmod +x qa/pull-tester/run-bitcoind-for-test.sh])
+AC_CONFIG_FILES([qa/pull-tester/run-hydracoind-for-test.sh],[chmod +x qa/pull-tester/run-hydracoind-for-test.sh])
 AC_CONFIG_FILES([qa/pull-tester/build-tests.sh],[chmod +x qa/pull-tester/build-tests.sh])
 AC_OUTPUT

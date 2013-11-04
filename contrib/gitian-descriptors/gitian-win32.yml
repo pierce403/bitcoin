@@ -1,5 +1,5 @@
 ---
-name: "bitcoin"
+name: "hydracoin"
 suites:
 - "precise"
 architectures:
@@ -19,12 +19,12 @@ packages:
 
 reference_datetime: "2013-06-01 00:00:00"
 remotes:
-- "url": "https://github.com/bitcoin/bitcoin.git"
-  "dir": "bitcoin"
+- "url": "https://github.com/hydracoin/hydracoin.git"
+  "dir": "hydracoin"
 files:
 - "qt-win32-4.8.3-gitian-r4.zip"
 - "boost-win32-1.54.0-gitian-r6.zip"
-- "bitcoin-deps-win32-gitian-r9.zip"
+- "hydracoin-deps-win32-gitian-r9.zip"
 - "protobuf-win32-2.5.0-gitian-r3.zip"
 script: |
   #
@@ -35,27 +35,27 @@ script: |
   cd $STAGING
   unzip ../build/qt-win32-4.8.3-gitian-r4.zip
   unzip ../build/boost-win32-1.54.0-gitian-r6.zip
-  unzip ../build/bitcoin-deps-win32-gitian-r9.zip
+  unzip ../build/hydracoin-deps-win32-gitian-r9.zip
   unzip ../build/protobuf-win32-2.5.0-gitian-r3.zip
   cd $HOME/build/
   #
-  cd bitcoin
+  cd hydracoin
   export PATH=$STAGING/host/bin:$PATH
   export TAR_OPTIONS=--mtime=`echo $REFERENCE_DATETIME | awk '{ print $1 }'`
   ./autogen.sh
-  ./configure --bindir=$OUTDIR --prefix=$STAGING --host=$HOST --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include" LDFLAGS="-L$STAGING/lib" CXXFLAGS="-frandom-seed=bitcoin"
+  ./configure --bindir=$OUTDIR --prefix=$STAGING --host=$HOST --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include" LDFLAGS="-L$STAGING/lib" CXXFLAGS="-frandom-seed=hydracoin"
   make dist
   mkdir -p distsrc
   cd distsrc
-  tar --strip-components=1 -xf ../bitcoin-*.tar.*
-  ./configure --bindir=$OUTDIR --prefix=$STAGING --host=i686-w64-mingw32 --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include" LDFLAGS="-L$STAGING/lib" CXXFLAGS="-frandom-seed=bitcoin"
+  tar --strip-components=1 -xf ../hydracoin-*.tar.*
+  ./configure --bindir=$OUTDIR --prefix=$STAGING --host=i686-w64-mingw32 --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include" LDFLAGS="-L$STAGING/lib" CXXFLAGS="-frandom-seed=hydracoin"
   export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
   export FAKETIME=$REFERENCE_DATETIME
   export TZ=UTC
   make $MAKEOPTS
   make deploy
   make install-strip
-  cp -f bitcoin-*setup*.exe $OUTDIR/
+  cp -f hydracoin-*setup*.exe $OUTDIR/
 
   mkdir -p $OUTDIR/src
-  cp -f ../bitcoin-*.tar.* $OUTDIR/src
+  cp -f ../hydracoin-*.tar.* $OUTDIR/src

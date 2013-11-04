@@ -7,7 +7,7 @@
 #include "db.h"
 #include "init.h"
 #include "miner.h"
-#include "bitcoinrpc.h"
+#include "hydracoinrpc.h"
 
 using namespace json_spirit;
 using namespace std;
@@ -294,7 +294,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
             "  \"sizelimit\" : limit of block size\n"
             "  \"bits\" : compressed target of next block\n"
             "  \"height\" : height of the next block\n"
-            "See https://en.bitcoin.it/wiki/BIP_0022 for full specification.");
+            "See https://en.hydracoin.it/wiki/BIP_0022 for full specification.");
 
     std::string strMode = "template";
     if (params.size() > 0)
@@ -429,7 +429,7 @@ Value submitblock(const Array& params, bool fHelp)
             "submitblock <hex data> [optional-params-obj]\n"
             "[optional-params-obj] parameter is currently ignored.\n"
             "Attempts to submit new block to network.\n"
-            "See https://en.bitcoin.it/wiki/BIP_0022 for full specification.");
+            "See https://en.hydracoin.it/wiki/BIP_0022 for full specification.");
 
     vector<unsigned char> blockData(ParseHex(params[0].get_str()));
     CDataStream ssBlock(blockData, SER_NETWORK, PROTOCOL_VERSION);

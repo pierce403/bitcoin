@@ -1,6 +1,6 @@
-bitcoin-qt usr/bin
-share/pixmaps/bitcoin32.xpm usr/share/pixmaps
-share/pixmaps/bitcoin16.xpm usr/share/pixmaps
-share/pixmaps/bitcoin128.png usr/share/pixmaps
-debian/bitcoin-qt.desktop usr/share/applications
-debian/bitcoin-qt.protocol usr/share/kde4/services/
+hydracoin-qt usr/bin
+share/pixmaps/hydracoin32.xpm usr/share/pixmaps
+share/pixmaps/hydracoin16.xpm usr/share/pixmaps
+share/pixmaps/hydracoin128.png usr/share/pixmaps
+debian/hydracoin-qt.desktop usr/share/applications
+debian/hydracoin-qt.protocol usr/share/kde4/services/

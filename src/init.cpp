@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
+#include "hydracoin-config.h"
 #endif
 
 #include "init.h"
@@ -13,7 +13,7 @@
 #include "chainparams.h"
 #include "txdb.h"
 #include "walletdb.h"
-#include "bitcoinrpc.h"
+#include "hydracoinrpc.h"
 #include "net.h"
 #include "util.h"
 #include "miner.h"
@@ -105,7 +105,7 @@ void Shutdown()
     TRY_LOCK(cs_Shutdown, lockShutdown);
     if (!lockShutdown) return;
 
-    RenameThread("bitcoin-shutoff");
+    RenameThread("hydracoin-shutoff");
     mempool.AddTransactionsUpdated(1);
     StopRPCThreads();
     ShutdownRPCMining();
@@ -176,13 +176,13 @@ std::string HelpMessage(HelpMessageMode hmm)
 {
     string strUsage = _("Options:") + "\n";
     strUsage += "  -?                     " + _("This help message") + "\n";
-    strUsage += "  -conf=<file>           " + _("Specify configuration file (default: bitcoin.conf)") + "\n";
+    strUsage += "  -conf=<file>           " + _("Specify configuration file (default: hydracoin.conf)") + "\n";
     strUsage += "  -datadir=<dir>         " + _("Specify data directory") + "\n";
     strUsage += "  -testnet               " + _("Use the test network") + "\n";
 
     if(hmm == HMM_BITCOIND || hmm == HMM_BITCOIN_QT)
     {
-        strUsage += "  -pid=<file>            " + _("Specify pid file (default: bitcoind.pid)") + "\n";
+        strUsage += "  -pid=<file>            " + _("Specify pid file (default: hydracoind.pid)") + "\n";
         strUsage += "  -gen                   " + _("Generate coins (default: 0)") + "\n";
         strUsage += "  -wallet=<file>         " + _("Specify wallet file (within data directory)") + "\n";
         strUsage += "  -dbcache=<n>           " + _("Set database cache size in megabytes (default: 25)") + "\n";
@@ -314,7 +314,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("bitcoin-loadblk");
+    RenameThread("hydracoin-loadblk");
 
     // -reindex
     if (fReindex) {
@@ -360,7 +360,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
     }
 }
 
-/** Initialize bitcoin.
+/** Initialize hydracoin.
  *  @pre Parameters should be parsed and config file should be read.
  */
 bool AppInit2(boost::thread_group& threadGroup)
@@ -860,7 +860,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     }
 
     // as LoadBlockIndex can take several minutes, it's possible the user
-    // requested to kill bitcoin-qt during the last operation. If so, exit.
+    // requested to kill hydracoin-qt during the last operation. If so, exit.
     // As the program has not fully started yet, Shutdown() is possibly overkill.
     if (fRequestShutdown)
     {

@@ -15,4 +15,4 @@ FORMS += \
     ../src/qt/forms/receiverequestdialog.ui
 
 RESOURCES += \
-    ../src/qt/bitcoin.qrc
+    ../src/qt/hydracoin.qrc

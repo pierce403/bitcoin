@@ -274,7 +274,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
         <translation>比特币客户端将关闭软件以完成加密过程。请您谨记：钱包加密并不是万能的，电脑中毒等原因仍可能导致您的比特币意外丢失。</translation>
     </message>
     <message>
@@ -322,7 +322,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>消息签名(&amp;M)...</translation>
     </message>
@@ -674,7 +674,7 @@ Address: %4
         <translation>钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;锁定&lt;/b&gt;状态</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>发生严重错误。</translation>
     </message>
@@ -1165,14 +1165,14 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation>暂时无法启动比特币：点击支付功能</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>比特币</translation>
@@ -2300,9 +2300,9 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>比特币版本</translation>
     </message>
@@ -2313,8 +2313,8 @@ Address: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>发送命令到服务器或 bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>发送命令到服务器或 hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2336,14 +2336,14 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>指定配置文件 (默认为 bitcoin.conf)
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>指定配置文件 (默认为 hydracoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>指定 pid 文件 (默认为 bitcoind.pid)
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>指定 pid 文件 (默认为 hydracoind.pid)
 </translation>
     </message>
     <message>
@@ -2426,7 +2426,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2437,7 +2437,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, 您必须在配置文件设置rpcpassword:
  %s
 建议您使用下面的随机密码:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (您无需记住此密码)
 用户名和密码 必! 须! 不一样。

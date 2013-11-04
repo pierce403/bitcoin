@@ -2,7 +2,7 @@
  * W.J. van der Laan 2011-2012
  */
 
-#include "bitcoingui.h"
+#include "hydracoingui.h"
 #include "clientmodel.h"
 #include "walletmodel.h"
 #include "optionsmodel.h"
@@ -99,7 +99,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("bitcoin-core", psz).toStdString();
+    return QCoreApplication::translate("hydracoin-core", psz).toStdString();
 }
 
 /* Handle runaway exceptions. Shows a message box with the problem and quits the program.
@@ -142,11 +142,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in bitcoin.qrc)
+    // Load e.g. hydracoin_de.qm (shortcut "de" needs to be defined in hydracoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in bitcoin.qrc)
+    // Load e.g. hydracoin_de_DE.qm (shortcut "de_DE" needs to be defined in hydracoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -177,7 +177,7 @@ int main(int argc, char *argv[])
 
     // Command-line options take precedence:
     ParseParameters(argc, argv);
-    // ... then bitcoin.conf:
+    // ... then hydracoin.conf:
     if (!boost::filesystem::is_directory(GetDataDir(false))) {
         fMissingDatadir = true;
     } else {
@@ -194,7 +194,7 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
 
-    Q_INIT_RESOURCE(bitcoin);
+    Q_INIT_RESOURCE(hydracoin);
     QApplication app(argc, argv);
 
     // Register meta types used for QMetaObject::invokeMethod
@@ -203,7 +203,7 @@ int main(int argc, char *argv[])
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
     QApplication::setOrganizationName("Bitcoin");
-    QApplication::setOrganizationDomain("bitcoin.org");
+    QApplication::setOrganizationDomain("hydracoin.org");
     if (TestNet()) // Separate UI settings for testnet
         QApplication::setApplicationName("Bitcoin-Qt-testnet");
     else
@@ -231,7 +231,7 @@ int main(int argc, char *argv[])
     }
 
     // Start up the payment server early, too, so impatient users that click on
-    // bitcoin: links repeatedly have their payment requests routed to this process:
+    // hydracoin: links repeatedly have their payment requests routed to this process:
     PaymentServer* paymentServer = new PaymentServer(&app);
 
     // User language is set up: pick a data directory
@@ -326,7 +326,7 @@ int main(int argc, char *argv[])
                 }
 
                 // Now that initialization/startup is done, process any command-line
-                // bitcoin: URIs or payment requests:
+                // hydracoin: URIs or payment requests:
                 QObject::connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                                  &window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
                 QObject::connect(&walletModel, SIGNAL(coinsSent(CWallet*,SendCoinsRecipient,QByteArray)),

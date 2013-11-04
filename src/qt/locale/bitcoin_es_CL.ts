@@ -277,8 +277,8 @@ Eric Young (eay@cryptsoft.com) y UPnP software escrito por Thomas Bernard.</tran
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin se cerrará para finalizar el proceso de encriptación. Recuerde que encriptar su billetera no protegera completatamente sus bitcoins de ser robados por malware que infecte su computador</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin se cerrará para finalizar el proceso de encriptación. Recuerde que encriptar su billetera no protegera completatamente sus hydracoins de ser robados por malware que infecte su computador</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -325,7 +325,7 @@ Eric Young (eay@cryptsoft.com) y UPnP software escrito por Thomas Bernard.</tran
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;Mensaje...</translation>
     </message>
@@ -422,12 +422,12 @@ Eric Young (eay@cryptsoft.com) y UPnP software escrito por Thomas Bernard.</tran
     <message>
         <location line="-319"/>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Enviar monedas a una dirección bitcoin</translation>
+        <translation>Enviar monedas a una dirección hydracoin</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Modifica las opciones de configuración de bitcoin</translation>
+        <translation>Modifica las opciones de configuración de hydracoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -676,7 +676,7 @@ Dirección: %4</translation>
         <translation>La billetera esta &lt;b&gt;codificada&lt;/b&gt; y actualmente &lt;b&gt;bloqueda&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
@@ -1167,14 +1167,14 @@ Dirección: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -2302,9 +2302,9 @@ Dirección: %4</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Versión Bitcoin</translation>
     </message>
@@ -2315,8 +2315,8 @@ Dirección: %4</translation>
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Envia comando a bitcoin lanzado con -server u bitcoind
+        <source>Send command to -server or hydracoind</source>
+        <translation>Envia comando a hydracoin lanzado con -server u hydracoind
 </translation>
     </message>
     <message>
@@ -2339,14 +2339,14 @@ Dirección: %4</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especifica archivo de configuración (predeterminado: bitcoin.conf)
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Especifica archivo de configuración (predeterminado: hydracoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especifica archivo pid (predeterminado: bitcoin.pid)
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Especifica archivo pid (predeterminado: hydracoin.pid)
 </translation>
     </message>
     <message>
@@ -2428,7 +2428,7 @@ Dirección: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

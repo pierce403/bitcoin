@@ -269,8 +269,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin sa teraz ukončí pre dokončenie procesu šifrovania. Pamätaj že šifrovanie peňaženky Ťa nemôže úplne ochrániť pred kráďežou bitcoinov pomocou škodlivého software.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin sa teraz ukončí pre dokončenie procesu šifrovania. Pamätaj že šifrovanie peňaženky Ťa nemôže úplne ochrániť pred kráďežou hydracoinov pomocou škodlivého software.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -317,7 +317,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Podpísať &amp;správu...</translation>
     </message>
@@ -414,12 +414,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-319"/>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Poslať bitcoins na adresu</translation>
+        <translation>Poslať hydracoins na adresu</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Upraviť možnosti nastavenia pre bitcoin</translation>
+        <translation>Upraviť možnosti nastavenia pre hydracoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -668,7 +668,7 @@ Adresa: %4</translation>
         <translation>Peňaženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálne &lt;b&gt;zamknutá&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
@@ -736,7 +736,7 @@ Adresa: %4</translation>
     <message>
         <location line="-5"/>
         <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>Vložená adresa &quot;%1&quot; nieje platnou adresou bitcoin.</translation>
+        <translation>Vložená adresa &quot;%1&quot; nieje platnou adresou hydracoin.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1158,14 +1158,14 @@ Adresa: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation type="unfinished"/>
@@ -1449,7 +1449,7 @@ Adresa: %4</translation>
     <message>
         <location line="+6"/>
         <source>Confirm send coins</source>
-        <translation>Potvrdiť odoslanie bitcoins</translation>
+        <translation>Potvrdiť odoslanie hydracoins</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2293,9 +2293,9 @@ Adresa: %4</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoin verzia</translation>
     </message>
@@ -2306,8 +2306,8 @@ Adresa: %4</translation>
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Odoslať príkaz -server alebo bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Odoslať príkaz -server alebo hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2326,13 +2326,13 @@ Adresa: %4</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Určiť súbor s nastaveniami (predvolené: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Určiť súbor s nastaveniami (predvolené: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Určiť súbor pid (predvolené: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Určiť súbor pid (predvolené: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2409,7 +2409,7 @@ Adresa: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

@@ -275,7 +275,7 @@ Denna produkten innehåller mjukvara utvecklad av OpenSSL Project för användni
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
         <translation>Programmet kommer nu att stänga ner för att färdigställa krypteringen. Tänk på att en krypterad plånbok inte skyddar mot stöld om din dator är infekterad med en keylogger.</translation>
     </message>
     <message>
@@ -323,7 +323,7 @@ Denna produkten innehåller mjukvara utvecklad av OpenSSL Project för användni
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Signera &amp;meddelande...</translation>
     </message>
@@ -675,7 +675,7 @@ Adress: %4
         <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>Ett allvarligt fel har uppstått. Bitcoin kan inte längre köras säkert och kommer att avslutas.</translation>
     </message>
@@ -1165,14 +1165,14 @@ Adress: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Kan inte starta bitcoin: klicka-och-betala handhavare</translation>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
+        <translation>Kan inte starta hydracoin: klicka-och-betala handhavare</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -2300,9 +2300,9 @@ Adress: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoin version</translation>
     </message>
@@ -2313,8 +2313,8 @@ Adress: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Skicka kommando till -server eller bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Skicka kommando till -server eller hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2333,13 +2333,13 @@ Adress: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Ange konfigurationsfil (förvalt: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Ange konfigurationsfil (förvalt: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Ange pid fil (förvalt: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Ange pid fil (förvalt: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2416,7 +2416,7 @@ Adress: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2427,7 +2427,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, du behöver sätta ett rpclösensord i konfigurationsfilen:
 %s
 Det är rekommenderat att använda följande slumpade lösenord:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (du behöver inte komma ihåg lösenordet)
 Användarnamnet och lösenordet FÅR INTE bara detsamma.
@@ -2464,7 +2464,7 @@ till exempel: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo
     <message>
         <location line="+4"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Fel: Denna transaktion kräver en transaktionsavgift på minst %s på grund av dess storlek, komplexitet, eller användning av senast mottagna bitcoins!</translation>
+        <translation>Fel: Denna transaktion kräver en transaktionsavgift på minst %s på grund av dess storlek, komplexitet, eller användning av senast mottagna hydracoins!</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3004,7 +3004,7 @@ till exempel: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo
     <message>
         <location line="-6"/>
         <source>Insufficient funds</source>
-        <translation>Otillräckligt med bitcoins</translation>
+        <translation>Otillräckligt med hydracoins</translation>
     </message>
     <message>
         <location line="+10"/>

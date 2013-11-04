@@ -1,11 +1,11 @@
 /*
- * Qt4 bitcoin GUI.
+ * Qt4 hydracoin GUI.
  *
  * W.J. van der Laan 2011-2012
  * The Bitcoin Developers 2011-2012
  */
 
-#include "bitcoingui.h"
+#include "hydracoingui.h"
 
 #include "optionsdialog.h"
 #include "aboutdialog.h"
@@ -13,7 +13,7 @@
 #include "walletmodel.h"
 #include "walletframe.h"
 #include "optionsmodel.h"
-#include "bitcoinunits.h"
+#include "hydracoinunits.h"
 #include "guiconstants.h"
 #include "notificator.h"
 #include "guiutil.h"
@@ -70,23 +70,23 @@ BitcoinGUI::BitcoinGUI(bool fIsTestnet, QWidget *parent) :
     if (!fIsTestnet)
     {
         setWindowTitle(tr("Bitcoin") + " - " + tr("Wallet"));
-        QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
-        setWindowIcon(QIcon(":icons/bitcoin"));
+        QApplication::setWindowIcon(QIcon(":icons/hydracoin"));
+        setWindowIcon(QIcon(":icons/hydracoin"));
     }
     else
     {
         setWindowTitle(tr("Bitcoin") + " - " + tr("Wallet") + " " + tr("[testnet]"));
-        QApplication::setWindowIcon(QIcon(":icons/bitcoin_testnet"));
-        setWindowIcon(QIcon(":icons/bitcoin_testnet"));
+        QApplication::setWindowIcon(QIcon(":icons/hydracoin_testnet"));
+        setWindowIcon(QIcon(":icons/hydracoin_testnet"));
     }
 #else
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 
     if (!fIsTestnet)
-        MacDockIconHandler::instance()->setIcon(QIcon(":icons/bitcoin"));
+        MacDockIconHandler::instance()->setIcon(QIcon(":icons/hydracoin"));
     else
-        MacDockIconHandler::instance()->setIcon(QIcon(":icons/bitcoin_testnet"));
+        MacDockIconHandler::instance()->setIcon(QIcon(":icons/hydracoin_testnet"));
 #endif
 
     // Create wallet frame and make it the central widget
@@ -192,7 +192,7 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     tabGroup->addAction(sendCoinsAction);
 
     receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and bitcoin: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and hydracoin: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -219,9 +219,9 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
     if (!fIsTestnet)
-        aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About Bitcoin"), this);
+        aboutAction = new QAction(QIcon(":/icons/hydracoin"), tr("&About Bitcoin"), this);
     else
-        aboutAction = new QAction(QIcon(":/icons/bitcoin_testnet"), tr("&About Bitcoin"), this);
+        aboutAction = new QAction(QIcon(":/icons/hydracoin_testnet"), tr("&About Bitcoin"), this);
     aboutAction->setStatusTip(tr("Show information about Bitcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
 #if QT_VERSION < 0x050000
@@ -235,9 +235,9 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     optionsAction->setStatusTip(tr("Modify configuration options for Bitcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     if (!fIsTestnet)
-        toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
+        toggleHideAction = new QAction(QIcon(":/icons/hydracoin"), tr("&Show / Hide"), this);
     else
-        toggleHideAction = new QAction(QIcon(":/icons/bitcoin_testnet"), tr("&Show / Hide"), this);
+        toggleHideAction = new QAction(QIcon(":/icons/hydracoin_testnet"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);

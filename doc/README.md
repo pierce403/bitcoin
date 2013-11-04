@@ -11,7 +11,7 @@ cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cry
 
 Setup
 ---------------------
-[Bitcoin-Qt](http://bitcoin.org/en/download) is the original Bitcoin client and it builds the backbone of the network. However, it downloads and stores the entire history of Bitcoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+[Bitcoin-Qt](http://hydracoin.org/en/download) is the original Bitcoin client and it builds the backbone of the network. However, it downloads and stores the entire history of Bitcoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
 ### Unix
 
@@ -21,23 +21,23 @@ You need the Qt4 run-time libraries to run Bitcoin-Qt. On Debian or Ubuntu:
 
 Unpack the files into a directory and run:
 
-- bin/32/bitcoin-qt (GUI, 32-bit)
-- bin/32/bitcoind (headless, 32-bit)
-- bin/64/bitcoin-qt (GUI, 64-bit)
-- bin/64/bitcoind (headless, 64-bit)
+- bin/32/hydracoin-qt (GUI, 32-bit)
+- bin/32/hydracoind (headless, 32-bit)
+- bin/64/hydracoin-qt (GUI, 64-bit)
+- bin/64/hydracoind (headless, 64-bit)
 
 
 
 ### Windows
 
-Unpack the files into a directory and run bitcoin-qt.exe.
+Unpack the files into a directory and run hydracoin-qt.exe.
 
 ### Need Help?
 
-* See the documentation at the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
+* See the documentation at the [Bitcoin Wiki](https://en.hydracoin.it/wiki/Main_Page)
 for help and more information.
-* Ask for help on [#bitcoin](http://webchat.freenode.net?channels=bitcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=bitcoin).
-* Ask for help on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [technical support board](https://bitcointalk.org/index.php?board=4.0).
+* Ask for help on [#hydracoin](http://webchat.freenode.net?channels=hydracoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=hydracoin).
+* Ask for help on the [BitcoinTalk](https://hydracointalk.org/) forums, in the [technical support board](https://hydracointalk.org/index.php?board=4.0).
 
 Building
 ---------------------
@@ -49,13 +49,13 @@ The following are developer notes on how to build Bitcoin on your native platfor
 
 Development
 ---------------------
-The Bitcoin repo's [root README](https://github.com/bitcoin/bitcoin/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Bitcoin repo's [root README](https://github.com/hydracoin/hydracoin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Coding Guidelines](coding.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://dev.visucore.com/bitcoin/doxygen/)
+- [Source Code Documentation (External Link)](https://dev.visucore.com/hydracoin/doxygen/)
 - [Translation Process](translation_process.md)
 - [Unit Tests](unit-tests.md)
 

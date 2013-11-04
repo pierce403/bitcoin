@@ -62,7 +62,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
         <source>These are your Bitcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>این آدرسها، آدرسهای bitcoin شما برای دریافت وجوه هستند. شما ممکن است آدرسهای متفاوت را به هر گیرنده اختصاص دهید که بتوانید مواردی که پرداخت می کنید را پیگیری نمایید</translation>
+        <translation>این آدرسها، آدرسهای hydracoin شما برای دریافت وجوه هستند. شما ممکن است آدرسهای متفاوت را به هر گیرنده اختصاص دهید که بتوانید مواردی که پرداخت می کنید را پیگیری نمایید</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -102,7 +102,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-44"/>
         <source>Verify a message to ensure it was signed with a specified Bitcoin address</source>
-        <translation>یک پیام را برای حصول اطمینان از ورود به سیستم با آدرس bitcoin مشخص، شناسایی کنید</translation>
+        <translation>یک پیام را برای حصول اطمینان از ورود به سیستم با آدرس hydracoin مشخص، شناسایی کنید</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -244,7 +244,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>هشدار: اگر wallet رمزگذاری شود و شما passphrase را گم کنید شما همه اطلاعات bitcoin را از دست خواهید داد.</translation>
+        <translation>هشدار: اگر wallet رمزگذاری شود و شما passphrase را گم کنید شما همه اطلاعات hydracoin را از دست خواهید داد.</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -270,7 +270,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
         <translation>Biticon هم اکنون بسته می‌شود تا فرایند رمزگذاری را تمام کند. به خاطر داشته باشید که رمزگذاری کیف پولتان نمی‌تواند به طور کامل بیتیکون‌های شما را در برابر دزدیده شدن توسط بدافزارهایی که رایانه شما را آلوده می‌کنند، محافظت نماید.</translation>
     </message>
     <message>
@@ -318,7 +318,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>امضا و پیام</translation>
     </message>
@@ -420,7 +420,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+52"/>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>انتخابهای پیکربندی را برای bitcoin اصلاح کن</translation>
+        <translation>انتخابهای پیکربندی را برای hydracoin اصلاح کن</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -479,7 +479,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+23"/>
         <location line="+2"/>
         <source>&amp;About Bitcoin</source>
-        <translation>در مورد bitcoin</translation>
+        <translation>در مورد hydracoin</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -669,7 +669,7 @@ Address: %4
         <translation>زمایش شبکه</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>خطا روی داده است. Bitcoin نمی تواند بدون مشکل ادامه دهد و باید بسته شود</translation>
     </message>
@@ -737,7 +737,7 @@ Address: %4
     <message>
         <location line="-5"/>
         <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>آدرس وارد شده %1 یک ادرس صحیح bitcoin نیست</translation>
+        <translation>آدرس وارد شده %1 یک ادرس صحیح hydracoin نیست</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -900,12 +900,12 @@ Address: %4
     <message>
         <location line="+31"/>
         <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>در زمان ورود به سیستم به صورت خودکار bitcoin را اجرا کن</translation>
+        <translation>در زمان ورود به سیستم به صورت خودکار hydracoin را اجرا کن</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Start Bitcoin on system login</source>
-        <translation>اجرای bitcoin در زمان ورود به سیستم</translation>
+        <translation>اجرای hydracoin در زمان ورود به سیستم</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -1096,7 +1096,7 @@ Address: %4
         <location line="+50"/>
         <location line="+202"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>اطلاعات نمایش داده شده روزآمد نیستند.wallet  شما به صورت خودکار با شبکه bitcoin بعد از برقراری اتصال روزآمد می شود اما این فرایند هنوز کامل نشده است.</translation>
+        <translation>اطلاعات نمایش داده شده روزآمد نیستند.wallet  شما به صورت خودکار با شبکه hydracoin بعد از برقراری اتصال روزآمد می شود اما این فرایند هنوز کامل نشده است.</translation>
     </message>
     <message>
         <location line="-131"/>
@@ -1159,14 +1159,14 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>یت کویین </translation>
@@ -2297,9 +2297,9 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>سخه بیتکویین</translation>
     </message>
@@ -2310,7 +2310,7 @@ Address: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
+        <source>Send command to -server or hydracoind</source>
         <translation>ارسال فرمان به سرور یا باتکویین</translation>
     </message>
     <message>
@@ -2330,13 +2330,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>(: bitcoin.confپیش فرض: )فایل تنظیمی خاص </translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>(: hydracoin.confپیش فرض: )فایل تنظیمی خاص </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>(bitcoind.pidپیش فرض : ) فایل پید خاص</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>(hydracoind.pidپیش فرض : ) فایل پید خاص</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2413,7 +2413,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2486,7 +2486,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     <message>
         <location line="+3"/>
         <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
-        <translation>هشدار: لطفا زمان و تاریخ رایانه خود را تصحیح نمایید! اگر ساعت رایانه شما اشتباه باشد bitcoin ممکن است صحیح کار نکند</translation>
+        <translation>هشدار: لطفا زمان و تاریخ رایانه خود را تصحیح نمایید! اگر ساعت رایانه شما اشتباه باشد hydracoin ممکن است صحیح کار نکند</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2756,7 +2756,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     <message>
         <location line="+5"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>گزینه ssl (به ویکیbitcoin برای راهنمای راه اندازی ssl مراجعه شود)</translation>
+        <translation>گزینه ssl (به ویکیhydracoin برای راهنمای راه اندازی ssl مراجعه شود)</translation>
     </message>
     <message>
         <location line="+1"/>

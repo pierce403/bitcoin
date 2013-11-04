@@ -34,7 +34,7 @@
 #include <openssl/x509_vfy.h>
 
 #include "base58.h"
-#include "bitcoinunits.h"
+#include "hydracoinunits.h"
 #include "guiconstants.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
@@ -45,10 +45,10 @@
 #include "walletmodel.h"
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("bitcoin:");
-const char* BITCOIN_REQUEST_MIMETYPE = "application/bitcoin-paymentrequest";
-const char* BITCOIN_PAYMENTACK_MIMETYPE = "application/bitcoin-paymentack";
-const char* BITCOIN_PAYMENTACK_CONTENTTYPE = "application/bitcoin-payment";
+const QString BITCOIN_IPC_PREFIX("hydracoin:");
+const char* BITCOIN_REQUEST_MIMETYPE = "application/hydracoin-paymentrequest";
+const char* BITCOIN_PAYMENTACK_MIMETYPE = "application/hydracoin-paymentack";
+const char* BITCOIN_PAYMENTACK_CONTENTTYPE = "application/hydracoin-payment";
 
 X509_STORE* PaymentServer::certStore = NULL;
 void PaymentServer::freeCertStore()
@@ -186,7 +186,7 @@ bool PaymentServer::ipcSendCommandLine(int argc, char* argv[])
         if (arg.startsWith("-"))
             continue;
 
-        if (arg.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // bitcoin: URI
+        if (arg.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // hydracoin: URI
         {
             savedPaymentRequests.append(arg);
 
@@ -259,7 +259,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
     GOOGLE_PROTOBUF_VERIFY_VERSION;
 
     // Install global event filter to catch QFileOpenEvents
-    // on Mac: sent when you click bitcoin: links
+    // on Mac: sent when you click hydracoin: links
     // other OSes: helpful when dealing with payment request files (in the future)
     if (parent)
         parent->installEventFilter(this);
@@ -274,7 +274,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
         uriServer = new QLocalServer(this);
 
         if (!uriServer->listen(name))
-            qDebug() << "PaymentServer::PaymentServer : Cannot start bitcoin: click-to-pay handler";
+            qDebug() << "PaymentServer::PaymentServer : Cannot start hydracoin: click-to-pay handler";
         else {
             connect(uriServer, SIGNAL(newConnection()), this, SLOT(handleURIConnection()));
             connect(this, SIGNAL(receivedPaymentACK(QString)), this, SLOT(handlePaymentACK(QString)));
@@ -291,12 +291,12 @@ PaymentServer::~PaymentServer()
 }
 
 //
-// OSX-specific way of handling bitcoin: URIs and
+// OSX-specific way of handling hydracoin: URIs and
 // PaymentRequest mime types
 //
 bool PaymentServer::eventFilter(QObject *, QEvent *event)
 {
-    // clicking on bitcoin: URIs creates FileOpen events on the Mac:
+    // clicking on hydracoin: URIs creates FileOpen events on the Mac:
     if (event->type() == QEvent::FileOpen)
     {
         QFileOpenEvent* fileEvent = static_cast<QFileOpenEvent*>(event);
@@ -317,7 +317,7 @@ void PaymentServer::initNetManager()
     if (netManager != NULL)
         delete netManager;
 
-    // netManager is used to fetch paymentrequests given in bitcoin: URIs
+    // netManager is used to fetch paymentrequests given in hydracoin: URIs
     netManager = new QNetworkAccessManager(this);
 
     // Use proxy settings from optionsModel
@@ -358,7 +358,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
-    if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // bitcoin:
+    if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // hydracoin:
     {
 #if QT_VERSION >= 0x050000
         QUrlQuery uri((QUrl(s)));
@@ -491,7 +491,7 @@ bool PaymentServer::processPaymentRequest(PaymentRequestPlus& request, QList<Sen
                 qDebug() << "PaymentServer::processPaymentRequest : Payment request, insecure " << recipients[i].address;
             }
             else {
-                // Insecure payments to custom bitcoin addresses are not supported
+                // Insecure payments to custom hydracoin addresses are not supported
                 // (there is no good way to tell the user where they are paying in a way
                 // they'd have a chance of understanding).
                 emit message(tr("Payment request error"),

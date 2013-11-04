@@ -274,8 +274,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Program Bitcoin zamknie się aby dokończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie zabezpiecza w pełni Twoich bitcoinów przed kradzieżą przez wirusy lub trojany mogące zainfekować Twój komputer.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Program Bitcoin zamknie się aby dokończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie zabezpiecza w pełni Twoich hydracoinów przed kradzieżą przez wirusy lub trojany mogące zainfekować Twój komputer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -322,7 +322,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Podpisz wiado&amp;mość...</translation>
     </message>
@@ -424,7 +424,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+52"/>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Zmienia opcje konfiguracji bitcoina</translation>
+        <translation>Zmienia opcje konfiguracji hydracoina</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -674,7 +674,7 @@ Adres: %4
         <translation>Portfel jest &lt;b&gt;zaszyfrowany&lt;/b&gt; i obecnie &lt;b&gt;zablokowany&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>Błąd krytyczny. Bitcoin nie może kontynuować bezpiecznie więc zostanie zamknięty.</translation>
     </message>
@@ -1101,7 +1101,7 @@ Adres: %4
         <location line="+50"/>
         <location line="+202"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią bitcoin, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
+        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią hydracoin, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
     </message>
     <message>
         <location line="-131"/>
@@ -1164,14 +1164,14 @@ Adres: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Nie można rozpocząć bitcoin: kliknij-by-zapłacić opiekunowi</translation>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
+        <translation>Nie można rozpocząć hydracoin: kliknij-by-zapłacić opiekunowi</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -1500,7 +1500,7 @@ Adres: %4
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Błąd: transakcja została odrzucona. Może się to zdarzyć, gdy monety z Twojego portfela zostały już wydane, na przykład gdy używałeś kopii wallet.dat i bitcoiny które tam wydałeś nie zostały jeszcze odjęte z portfela z którego teraz korzystasz.</translation>
+        <translation>Błąd: transakcja została odrzucona. Może się to zdarzyć, gdy monety z Twojego portfela zostały już wydane, na przykład gdy używałeś kopii wallet.dat i hydracoiny które tam wydałeś nie zostały jeszcze odjęte z portfela z którego teraz korzystasz.</translation>
     </message>
 </context>
 <context>
@@ -2299,9 +2299,9 @@ Adres: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Wersja Bitcoin</translation>
     </message>
@@ -2312,8 +2312,8 @@ Adres: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Wyślij polecenie do -server lub bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Wyślij polecenie do -server lub hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2332,13 +2332,13 @@ Adres: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Wskaż plik konfiguracyjny (domyślnie: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Wskaż plik konfiguracyjny (domyślnie: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Wskaż plik pid (domyślnie: bitcoin.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Wskaż plik pid (domyślnie: hydracoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2415,7 +2415,7 @@ Adres: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2426,7 +2426,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, musisz ustawić rpcpassword w pliku konfiguracyjnym:⏎
 %s⏎
 Zalecane jest użycie losowego hasła:⏎
-rpcuser=bitcoinrpc⏎
+rpcuser=hydracoinrpc⏎
 rpcpassword=%s⏎
 (nie musisz pamiętać tego hasła)⏎
 Użytkownik i hasło nie mogą być takie same.⏎
@@ -2457,7 +2457,7 @@ na przykład: alertnotify=echo %%s | mail -s &quot;Alarm Bitcoin&quot; admin@foo
     <message>
         <location line="+4"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Błąd: transakcja została odrzucona. Może się to zdarzyć, gdy monety z Twojego portfela zostały już wydane, na przykład gdy używałeś kopii wallet.dat i bitcoiny które tam wydałeś nie zostały jeszcze odjęte z portfela z którego teraz korzystasz.</translation>
+        <translation>Błąd: transakcja została odrzucona. Może się to zdarzyć, gdy monety z Twojego portfela zostały już wydane, na przykład gdy używałeś kopii wallet.dat i hydracoiny które tam wydałeś nie zostały jeszcze odjęte z portfela z którego teraz korzystasz.</translation>
     </message>
     <message>
         <location line="+4"/>

@@ -7,7 +7,7 @@
 #include "init.h"
 #include "util.h"
 #include "main.h"
-#include "bitcoinrpc.h"
+#include "hydracoinrpc.h"
 #include <boost/algorithm/string/predicate.hpp>
 
 void DetectShutdownThread(boost::thread_group* threadGroup)
@@ -41,7 +41,7 @@ bool AppInit(int argc, char* argv[])
         //
         // Parameters
         //
-        // If Qt is used, parameters/bitcoin.conf are parsed in qt/bitcoin.cpp's main()
+        // If Qt is used, parameters/hydracoin.conf are parsed in qt/hydracoin.cpp's main()
         ParseParameters(argc, argv);
         if (!boost::filesystem::is_directory(GetDataDir(false)))
         {
@@ -57,14 +57,14 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to bitcoind / RPC client
+            // First part of help message is specific to hydracoind / RPC client
             std::string strUsage = _("Bitcoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  bitcoind [options]                     " + _("Start Bitcoin server") + "\n" +
-                _("Usage (deprecated, use bitcoin-cli):") + "\n" +
-                  "  bitcoind [options] <command> [params]  " + _("Send command to Bitcoin server") + "\n" +
-                  "  bitcoind [options] help                " + _("List commands") + "\n" +
-                  "  bitcoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  hydracoind [options]                     " + _("Start Bitcoin server") + "\n" +
+                _("Usage (deprecated, use hydracoin-cli):") + "\n" +
+                  "  hydracoind [options] <command> [params]  " + _("Send command to Bitcoin server") + "\n" +
+                  "  hydracoind [options] help                " + _("List commands") + "\n" +
+                  "  hydracoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
 
@@ -75,7 +75,7 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "bitcoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "hydracoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)
@@ -144,7 +144,7 @@ int main(int argc, char* argv[])
     bool fRet = false;
     fHaveGUI = false;
 
-    // Connect bitcoind signal handlers
+    // Connect hydracoind signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);

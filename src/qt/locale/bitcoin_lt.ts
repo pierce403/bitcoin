@@ -273,8 +273,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin dabar užsidarys šifravimo proceso pabaigai. Atminkite, kad piniginės šifravimas negali pilnai apsaugoti bitcoinų vagysčių kai tinkle esančios kenkėjiškos programos patenka į jūsų kompiuterį.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin dabar užsidarys šifravimo proceso pabaigai. Atminkite, kad piniginės šifravimas negali pilnai apsaugoti hydracoinų vagysčių kai tinkle esančios kenkėjiškos programos patenka į jūsų kompiuterį.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -321,7 +321,7 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Pasirašyti ži&amp;nutę...</translation>
     </message>
@@ -423,7 +423,7 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     <message>
         <location line="+52"/>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Keisti bitcoin konfigūracijos galimybes</translation>
+        <translation>Keisti hydracoin konfigūracijos galimybes</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -672,7 +672,7 @@ Adresas: %4</translation>
         <translation>Piniginė &lt;b&gt;užšifruota&lt;/b&gt; ir šiuo metu &lt;b&gt;užrakinta&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
@@ -1162,14 +1162,14 @@ Adresas: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -2297,9 +2297,9 @@ Adresas: %4</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoin versija</translation>
     </message>
@@ -2310,8 +2310,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Siųsti komandą serveriui arba bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Siųsti komandą serveriui arba hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2330,13 +2330,13 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Nurodyti konfigūracijos failą (pagal nutylėjimąt: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Nurodyti konfigūracijos failą (pagal nutylėjimąt: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Nurodyti pid failą (pagal nutylėjimą: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Nurodyti pid failą (pagal nutylėjimą: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2413,7 +2413,7 @@ Adresas: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

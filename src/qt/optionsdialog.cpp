@@ -1,11 +1,11 @@
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
+#include "hydracoin-config.h"
 #endif
 
 #include "optionsdialog.h"
 #include "ui_optionsdialog.h"
 
-#include "bitcoinunits.h"
+#include "hydracoinunits.h"
 #include "monitoreddatamapper.h"
 #include "netbase.h"
 #include "optionsmodel.h"
@@ -130,7 +130,7 @@ void OptionsDialog::setMapper()
 {
     /* Main */
     mapper->addMapping(ui->transactionFee, OptionsModel::Fee);
-    mapper->addMapping(ui->bitcoinAtStartup, OptionsModel::StartAtStartup);
+    mapper->addMapping(ui->hydracoinAtStartup, OptionsModel::StartAtStartup);
 
     /* Network */
     mapper->addMapping(ui->mapPortUpnp, OptionsModel::MapPortUPnP);

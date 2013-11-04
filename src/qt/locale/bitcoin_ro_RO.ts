@@ -102,7 +102,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-44"/>
         <source>Verify a message to ensure it was signed with a specified Bitcoin address</source>
-        <translation>Verifica mesajul pentru a te asigura ca a fost insemnat cu o adresa bitcoin specifica</translation>
+        <translation>Verifica mesajul pentru a te asigura ca a fost insemnat cu o adresa hydracoin specifica</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -269,8 +269,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin se va închide acum pentru a termina procesul de criptare. Amintiți-vă că criptarea portofelului dumneavoastră nu poate proteja în totalitate bitcoins dvs. de a fi furate de intentii rele.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin se va închide acum pentru a termina procesul de criptare. Amintiți-vă că criptarea portofelului dumneavoastră nu poate proteja în totalitate hydracoins dvs. de a fi furate de intentii rele.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -317,7 +317,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Semneaza &amp;mesaj...</translation>
     </message>
@@ -665,7 +665,7 @@ Address: %4
         <translation>Portofelul electronic este &lt;b&gt;criptat&lt;/b&gt; iar in momentul de faţă este &lt;b&gt;blocat&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
@@ -733,7 +733,7 @@ Address: %4
     <message>
         <location line="-5"/>
         <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>Adresa introdusă &quot;%1&quot; nu este o adresă bitcoin valabilă.</translation>
+        <translation>Adresa introdusă &quot;%1&quot; nu este o adresă hydracoin valabilă.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1016,7 +1016,7 @@ Address: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Alege subdiviziunea folosită la afişarea interfeţei şi la trimiterea de bitcoin.</translation>
+        <translation>Alege subdiviziunea folosită la afişarea interfeţei şi la trimiterea de hydracoin.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1078,7 +1078,7 @@ Address: %4
     <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
-        <translation>Adresa bitcoin pe care a-ti specificat-o este invalida</translation>
+        <translation>Adresa hydracoin pe care a-ti specificat-o este invalida</translation>
     </message>
 </context>
 <context>
@@ -1155,14 +1155,14 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -1370,7 +1370,7 @@ Address: %4
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
         <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Bun venit la consola bitcoin RPC</translation>
+        <translation>Bun venit la consola hydracoin RPC</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1446,7 +1446,7 @@ Address: %4
     <message>
         <location line="+6"/>
         <source>Confirm send coins</source>
-        <translation>Confirmaţi trimiterea de bitcoin</translation>
+        <translation>Confirmaţi trimiterea de hydracoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1491,7 +1491,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Eroare: Tranyacţia a fost respinsă.  Acesta poate fi rezultatul cheltuirii prealabile a unei sume de bitcoin din portofelul electronic, ca în cazul folosirii unei copii a fisierului wallet.dat, în care s-au efectuat tranzacţii neînregistrate în fisierul curent.</translation>
+        <translation>Eroare: Tranyacţia a fost respinsă.  Acesta poate fi rezultatul cheltuirii prealabile a unei sume de hydracoin din portofelul electronic, ca în cazul folosirii unei copii a fisierului wallet.dat, în care s-au efectuat tranzacţii neînregistrate în fisierul curent.</translation>
     </message>
 </context>
 <context>
@@ -1890,7 +1890,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Monedele bitcoin generate se pot cheltui dupa parcurgerea a 120 de blocuri.  După ce a fost generat, s-a propagat în reţea, urmând să fie adăugat lanţului de blocuri.  Dacă nu poate fi inclus in lanţ, starea sa va deveni &quot;neacceptat&quot; si nu va putea fi folosit la tranzacţii.  Acest fenomen se întâmplă atunci cand un alt nod a generat un bloc la o diferenţa de câteva secunde.</translation>
+        <translation>Monedele hydracoin generate se pot cheltui dupa parcurgerea a 120 de blocuri.  După ce a fost generat, s-a propagat în reţea, urmând să fie adăugat lanţului de blocuri.  Dacă nu poate fi inclus in lanţ, starea sa va deveni &quot;neacceptat&quot; si nu va putea fi folosit la tranzacţii.  Acest fenomen se întâmplă atunci cand un alt nod a generat un bloc la o diferenţa de câteva secunde.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2290,9 +2290,9 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>versiunea Bitcoin</translation>
     </message>
@@ -2303,8 +2303,8 @@ Address: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Trimite comanda la -server sau bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Trimite comanda la -server sau hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2323,13 +2323,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specifica-ți configurația fisierului (in mod normal: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Specifica-ți configurația fisierului (in mod normal: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specifica fisierul pid (normal: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Specifica fisierul pid (normal: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2407,7 +2407,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2942,7 +2942,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     <message>
         <location line="+96"/>
         <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
-        <translation>Portofelul trebuie rescris: restarteaza aplicatia bitcoin pentru a face asta.</translation>
+        <translation>Portofelul trebuie rescris: restarteaza aplicatia hydracoin pentru a face asta.</translation>
     </message>
     <message>
         <location line="-98"/>

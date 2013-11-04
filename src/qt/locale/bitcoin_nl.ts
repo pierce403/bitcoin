@@ -122,7 +122,7 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Bitcoinadressen om betalingen mee te verzenden. Check altijd het bedrag en het ontvangende adres voordat u uw bitcoins verzendt.</translation>
+        <translation>Dit zijn uw Bitcoinadressen om betalingen mee te verzenden. Check altijd het bedrag en het ontvangende adres voordat u uw hydracoins verzendt.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -274,8 +274,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw bitcoins stelen.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw hydracoins stelen.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -322,7 +322,7 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Onderteken bericht...</translation>
     </message>
@@ -674,7 +674,7 @@ Adres: %4
         <translation>Portemonnee is &lt;b&gt;versleuteld&lt;/b&gt; en momenteel &lt;b&gt;gesloten&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>Er is een fatale fout opgetreden. Bitcoin kan niet meer veilig doorgaan en zal nu afgesloten worden.</translation>
     </message>
@@ -1164,14 +1164,14 @@ Adres: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Kan bitcoin niet starten: click-to-pay handler</translation>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
+        <translation>Kan hydracoin niet starten: click-to-pay handler</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -2299,9 +2299,9 @@ Adres: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoinversie</translation>
     </message>
@@ -2312,8 +2312,8 @@ Adres: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Stuur commando naar -server of bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Stuur commando naar -server of hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2332,14 +2332,14 @@ Adres: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specificeer configuratiebestand (standaard: bitcoin.conf)
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Specificeer configuratiebestand (standaard: hydracoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specificeer pid-bestand (standaard: bitcoind.pid)
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Specificeer pid-bestand (standaard: hydracoind.pid)
 </translation>
     </message>
     <message>
@@ -2417,7 +2417,7 @@ Adres: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2427,7 +2427,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
 </source>
         <translation>%s, u moet een RPC-wachtwoord instellen in het configuratiebestand: %s
 U wordt aangeraden het volgende willekeurige wachtwoord te gebruiken:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (u hoeft dit wachtwoord niet te onthouden)
 De gebruikersnaam en wachtwoord mogen niet hetzelfde zijn.

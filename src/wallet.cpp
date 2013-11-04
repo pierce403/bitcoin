@@ -1251,7 +1251,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend,
                 // The following if statement should be removed once enough miners
                 // have upgraded to the 0.9 GetMinFee() rules. Until then, this avoids
                 // creating free transactions that have change outputs less than
-                // CENT bitcoins.
+                // CENT hydracoins.
                 if (nFeeRet < CTransaction::nMinTxFee && nChange > 0 && nChange < CENT)
                 {
                     int64 nMoveToFee = min(nChange, CTransaction::nMinTxFee - nFeeRet);
@@ -1274,7 +1274,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend,
 
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-bitcoin-address
+                    // change transaction isn't always pay-to-hydracoin-address
                     CScript scriptChange;
                     scriptChange.SetDestination(vchPubKey.GetID());
 

@@ -1,7 +1,7 @@
 #include "receiverequestdialog.h"
 #include "ui_receiverequestdialog.h"
 
-#include "bitcoinunits.h"
+#include "hydracoinunits.h"
 #include "guiconstants.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
@@ -17,7 +17,7 @@
 #endif
 
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h" /* for USE_QRCODE */
+#include "hydracoin-config.h" /* for USE_QRCODE */
 #endif
 
 #ifdef USE_QRCODE

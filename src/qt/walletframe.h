@@ -1,5 +1,5 @@
 /*
- * Qt4 bitcoin GUI.
+ * Qt4 hydracoin GUI.
  *
  * W.J. van der Laan 2011-2012
  * The Bitcoin Developers 2011-2013

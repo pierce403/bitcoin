@@ -11,7 +11,7 @@ namespace Ui {
 class WalletModel;
 
 /**
- * A single entry in the dialog for sending bitcoins.
+ * A single entry in the dialog for sending hydracoins.
  * Stacked widget, with different UIs for payment requests
  * with a strong payee identity.
  */

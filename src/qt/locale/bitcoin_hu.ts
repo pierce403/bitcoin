@@ -273,7 +273,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin will close now to finish the encryption process. Ne feledd, hogy a tárca titkosítása sem nyújt teljes védelmet az adathalász programok fertőzésével szemben.</translation>
     </message>
     <message>
@@ -321,7 +321,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Üzenet aláírása...</translation>
     </message>
@@ -673,7 +673,7 @@ Cím: %4
         <translation>Tárca &lt;b&gt;kódolva&lt;/b&gt; és jelenleg &lt;b&gt;zárva&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
@@ -1164,14 +1164,14 @@ Cím: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>A bitcoint nem lehet elindítani: click-to-pay handler</translation>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
+        <translation>A hydracoint nem lehet elindítani: click-to-pay handler</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -1480,7 +1480,7 @@ Cím: %4
     <message>
         <location line="+5"/>
         <source>The amount exceeds your balance.</source>
-        <translation>Nincs ennyi bitcoin az egyenlegeden.</translation>
+        <translation>Nincs ennyi hydracoin az egyenlegeden.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2300,9 +2300,9 @@ Cím: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoin verzió</translation>
     </message>
@@ -2313,8 +2313,8 @@ Cím: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Parancs küldése a -serverhez vagy a bitcoindhez
+        <source>Send command to -server or hydracoind</source>
+        <translation>Parancs küldése a -serverhez vagy a hydracoindhez
 </translation>
     </message>
     <message>
@@ -2337,14 +2337,14 @@ Cím: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Konfigurációs fájl (alapértelmezett: bitcoin.conf)
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Konfigurációs fájl (alapértelmezett: hydracoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>pid-fájl (alapértelmezett: bitcoind.pid)
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>pid-fájl (alapértelmezett: hydracoind.pid)
 </translation>
     </message>
     <message>
@@ -2426,7 +2426,7 @@ Cím: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3015,7 +3015,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     <message>
         <location line="-6"/>
         <source>Insufficient funds</source>
-        <translation>Nincs elég bitcoinod.</translation>
+        <translation>Nincs elég hydracoinod.</translation>
     </message>
     <message>
         <location line="+10"/>

@@ -274,8 +274,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>O Bitcoin irá fechar agora para finalizar o processo de encriptação. Lembre-se de que encriptar sua carteira não protege totalmente suas bitcoins de serem roubadas por malwares que tenham infectado o seu computador.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>O Bitcoin irá fechar agora para finalizar o processo de encriptação. Lembre-se de que encriptar sua carteira não protege totalmente suas hydracoins de serem roubadas por malwares que tenham infectado o seu computador.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -322,7 +322,7 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Assinar Mensagem...</translation>
     </message>
@@ -419,12 +419,12 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     <message>
         <location line="-319"/>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Enviar moedas para um endereço bitcoin</translation>
+        <translation>Enviar moedas para um endereço hydracoin</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Modificar opções de configuração para bitcoin</translation>
+        <translation>Modificar opções de configuração para hydracoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -673,7 +673,7 @@ Endereço: %4</translation>
         <translation>Carteira está &lt;b&gt;criptografada&lt;/b&gt; e atualmente &lt;b&gt;bloqueada&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>Um erro fatal ocorreu. Bitcoin não pode continuar em segurança e irá fechar.</translation>
     </message>
@@ -1024,7 +1024,7 @@ Endereço: %4</translation>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Escolha a unidade padrão de subdivisão para interface mostrar quando enviar bitcoins.</translation>
+        <translation>Escolha a unidade padrão de subdivisão para interface mostrar quando enviar hydracoins.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1163,14 +1163,14 @@ Endereço: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Não foi possível iniciar bitcoin: manipulador clique-para-pagar</translation>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
+        <translation>Não foi possível iniciar hydracoin: manipulador clique-para-pagar</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -1499,7 +1499,7 @@ Endereço: %4</translation>
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Erro: A transação foi rejeitada. Isso pode acontecer se alguns dos bitcoins de sua carteira já haviam sido gastos, por exemplo se você usou uma cópia do arquivo wallet.dat e alguns bitcoins foram gastos na cópia mas não foram marcados como gastos aqui.</translation>
+        <translation>Erro: A transação foi rejeitada. Isso pode acontecer se alguns dos hydracoins de sua carteira já haviam sido gastos, por exemplo se você usou uma cópia do arquivo wallet.dat e alguns hydracoins foram gastos na cópia mas não foram marcados como gastos aqui.</translation>
     </message>
 </context>
 <context>
@@ -2298,9 +2298,9 @@ Endereço: %4</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Versão do Bitcoin</translation>
     </message>
@@ -2311,8 +2311,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Enviar comando para -server ou bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Enviar comando para -server ou hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2331,13 +2331,13 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especifique um arquivo de configurações (padrão: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Especifique um arquivo de configurações (padrão: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especifique um arquivo de pid (padrão: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Especifique um arquivo de pid (padrão: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2414,7 +2414,7 @@ Endereço: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2425,7 +2425,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, você deve especificar uma senha rpcpassword no arquivo de configuração:⏎
 %s⏎
 É recomendado que você use a seguinte senha aleatória:⏎
-rpcuser=bitcoinrpc⏎
+rpcuser=hydracoinrpc⏎
 rpcpassword=%s⏎
 (você não precisa lembrar esta senha)⏎
 O nome de usuário e a senha NÃO PODEM ser os mesmos.⏎
@@ -2457,7 +2457,7 @@ por exemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     <message>
         <location line="+4"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Erro: A transação foi rejeitada. Isso pode acontecer se alguns dos bitcoins de sua carteira já haviam sido gastos, por exemplo se você usou uma cópia do arquivo wallet.dat e alguns bitcoins foram gastos na cópia mas não foram marcados como gastos aqui.</translation>
+        <translation>Erro: A transação foi rejeitada. Isso pode acontecer se alguns dos hydracoins de sua carteira já haviam sido gastos, por exemplo se você usou uma cópia do arquivo wallet.dat e alguns hydracoins foram gastos na cópia mas não foram marcados como gastos aqui.</translation>
     </message>
     <message>
         <location line="+4"/>

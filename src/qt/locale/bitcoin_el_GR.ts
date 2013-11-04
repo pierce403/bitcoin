@@ -275,8 +275,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Το Bitcoin θα κλεισει τώρα για να τελειώσει την διαδικασία κρυπτογραφησης. Θυμησου ότι κρυπτογραφώντας το πορτοφολι σου δεν μπορείς να προστατέψεις πλήρως τα bitcoins σου από κλοπή στην περίπτωση όπου μολυνθεί ο υπολογιστής σου με κακόβουλο λογισμικο.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Το Bitcoin θα κλεισει τώρα για να τελειώσει την διαδικασία κρυπτογραφησης. Θυμησου ότι κρυπτογραφώντας το πορτοφολι σου δεν μπορείς να προστατέψεις πλήρως τα hydracoins σου από κλοπή στην περίπτωση όπου μολυνθεί ο υπολογιστής σου με κακόβουλο λογισμικο.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -323,7 +323,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Υπογραφή &amp;Μηνύματος...</translation>
     </message>
@@ -420,7 +420,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-319"/>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Στείλε νομισματα σε μια διεύθυνση bitcoin</translation>
+        <translation>Στείλε νομισματα σε μια διεύθυνση hydracoin</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -677,7 +677,7 @@ Address: %4
         <translation>Το πορτοφόλι είναι &lt;b&gt;κρυπτογραφημένο&lt;/b&gt; και &lt;b&gt;κλειδωμένο&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>Παρουσιάστηκε ανεπανόρθωτο σφάλμα. Το Bitcoin δεν μπορεί πλέον να συνεχίσει με ασφάλεια και θα τερματισθει.</translation>
     </message>
@@ -792,7 +792,7 @@ Address: %4
         <location filename="../guiutil.cpp" line="+517"/>
         <location line="+13"/>
         <source>Bitcoin-Qt</source>
-        <translation>bitcoin-qt</translation>
+        <translation>hydracoin-qt</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -1167,14 +1167,14 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation>Δεν είναι δυνατή η εκκίνηση του Bitcoin: click-to-pay handler</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -2302,9 +2302,9 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Έκδοση Bitcoin</translation>
     </message>
@@ -2315,8 +2315,8 @@ Address: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Αποστολή εντολής στον εξυπηρετητή ή στο bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Αποστολή εντολής στον εξυπηρετητή ή στο hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2335,13 +2335,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Ορίστε αρχείο ρυθμίσεων (προεπιλογή: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Ορίστε αρχείο ρυθμίσεων (προεπιλογή: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Ορίστε αρχείο pid (προεπιλογή: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Ορίστε αρχείο pid (προεπιλογή: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2418,7 +2418,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2429,7 +2429,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

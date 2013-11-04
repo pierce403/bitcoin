@@ -274,7 +274,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
         <translation>ביטקוין ייסגר עכשיו כדי להשלים את תהליך ההצפנה. זכור שהצפנת הארנק שלך אינו יכול להגן באופן מלא על הביטקוינים שלך מתוכנות זדוניות המושתלות על המחשב.</translation>
     </message>
     <message>
@@ -322,7 +322,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>חתום על הודעה</translation>
     </message>
@@ -673,7 +673,7 @@ Address: %4
         <translation>הארנק &lt;b&gt;מוצפן&lt;/b&gt; וכרגע &lt;b&gt;נעול&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>שגיאה סופנית אירעה. ביטקוין אינו יכול להמשיך לפעול בבטחה ולכן ייסגר.</translation>
     </message>
@@ -1163,14 +1163,14 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation>לא ניתן להתחיל את ביטקוין: מפעיל לחץ-לתשלום </translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>ביטקוין</translation>
@@ -1333,7 +1333,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Show the Bitcoin-Qt help message to get a list with possible Bitcoin command-line options.</source>
-        <translation>הצג את הודעה העזרה של bitcoin-qt כדי לקבל רשימה של אפשרויות שורת פקודה של ביטקוין.</translation>
+        <translation>הצג את הודעה העזרה של hydracoin-qt כדי לקבל רשימה של אפשרויות שורת פקודה של ביטקוין.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2298,9 +2298,9 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>גרסת ביטקוין</translation>
     </message>
@@ -2311,8 +2311,8 @@ Address: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>שלח פקודה ל -server או bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>שלח פקודה ל -server או hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2331,13 +2331,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>ציין קובץ הגדרות (ברירת מחדל: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>ציין קובץ הגדרות (ברירת מחדל: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>ציין קובץ pid (ברירת מחדל: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>ציין קובץ pid (ברירת מחדל: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2414,7 +2414,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2425,7 +2425,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, עליך לקבוע סיסמת RPC בקובץ הקונפיגורציה:
  %s
 מומלץ להשתמש בסיסמא האקראית הבאה:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (אין צורך לזכור את הסיסמה)
 אסור ששם המשתמש והסיסמא יהיו זהים.

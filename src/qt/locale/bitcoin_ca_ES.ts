@@ -269,8 +269,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin es tancarà ara per acabar el procés d&apos;encriptació. Recorda que encriptar el teu moneder no protegeix completament els teus bitcoins de ser robades per programari maliciós instal·lat al teu ordinador.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin es tancarà ara per acabar el procés d&apos;encriptació. Recorda que encriptar el teu moneder no protegeix completament els teus hydracoins de ser robades per programari maliciós instal·lat al teu ordinador.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -317,7 +317,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Signar &amp;missatge...</translation>
     </message>
@@ -419,7 +419,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+52"/>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Modificar les opcions de configuració per bitcoin</translation>
+        <translation>Modificar les opcions de configuració per hydracoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -665,7 +665,7 @@ Address: %4
         <translation>El moneder està &lt;b&gt;encriptat&lt;/b&gt; i actualment &lt;b&gt;bloquejat&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>Ha tingut lloc un error fatal. Bitcoin no pot continuar executant-se de manera segura i es tancará.</translation>
     </message>
@@ -1155,14 +1155,14 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>No es pot iniciar bitcoin: manejador clicla-per-pagar</translation>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
+        <translation>No es pot iniciar hydracoin: manejador clicla-per-pagar</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation type="unfinished"/>
@@ -2290,9 +2290,9 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Versió de Bitcoin</translation>
     </message>
@@ -2303,8 +2303,8 @@ Address: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Enviar comanda a -servidor o bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Enviar comanda a -servidor o hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2323,13 +2323,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especificat arxiu de configuració (per defecte: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Especificat arxiu de configuració (per defecte: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especificar arxiu pid (per defecte: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Especificar arxiu pid (per defecte: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2406,7 +2406,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2414,7 +2414,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
 </source>
-        <translation>%s has de establir una contrasenya RPC a l&apos;arxiu de configuració:\n%s\nEs recomana que useu la següent constrasenya aleatòria:\nrpcuser=bitcoinrpc\nrpcpassword=%s\n(no necesiteu recordar aquesta contrsenya)\nEl nom d&apos;usuari i contrasenya NO HAN de ser els mateixos.\nSi l&apos;arxiu no existeix, crea&apos;l amb els permisos d&apos;arxiu de només lectura per al propietari.\nTambé es recomana establir la notificació d&apos;alertes i així seràs notificat de les incidències;\nper exemple: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com</translation>
+        <translation>%s has de establir una contrasenya RPC a l&apos;arxiu de configuració:\n%s\nEs recomana que useu la següent constrasenya aleatòria:\nrpcuser=hydracoinrpc\nrpcpassword=%s\n(no necesiteu recordar aquesta contrsenya)\nEl nom d&apos;usuari i contrasenya NO HAN de ser els mateixos.\nSi l&apos;arxiu no existeix, crea&apos;l amb els permisos d&apos;arxiu de només lectura per al propietari.\nTambé es recomana establir la notificació d&apos;alertes i així seràs notificat de les incidències;\nper exemple: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com</translation>
     </message>
     <message>
         <location line="+17"/>

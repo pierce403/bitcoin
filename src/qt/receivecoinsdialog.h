@@ -10,7 +10,7 @@ namespace Ui {
 class WalletModel;
 class OptionsModel;
 
-/** Dialog for requesting payment of bitcoins */
+/** Dialog for requesting payment of hydracoins */
 class ReceiveCoinsDialog : public QDialog
 {
     Q_OBJECT

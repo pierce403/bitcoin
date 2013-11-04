@@ -7,10 +7,10 @@ SetCompressor /SOLID lzma
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION @CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@
 !define COMPANY "Bitcoin project"
-!define URL http://www.bitcoin.org/
+!define URL http://www.hydracoin.org/
 
 # MUI Symbol Definitions
-!define MUI_ICON "@abs_top_srcdir@/share/pixmaps/bitcoin.ico"
+!define MUI_ICON "@abs_top_srcdir@/share/pixmaps/hydracoin.ico"
 !define MUI_WELCOMEFINISHPAGE_BITMAP "@abs_top_srcdir@/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
@@ -20,7 +20,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER @PACKAGE_NAME@
-!define MUI_FINISHPAGE_RUN $INSTDIR\bitcoin-qt.exe
+!define MUI_FINISHPAGE_RUN $INSTDIR\hydracoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "@abs_top_srcdir@/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -45,7 +45,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile @abs_top_srcdir@/bitcoin-${VERSION}-win32-setup.exe
+OutFile @abs_top_srcdir@/hydracoin-${VERSION}-win32-setup.exe
 InstallDir $PROGRAMFILES\Bitcoin
 CRCCheck on
 XPStyle on
@@ -66,18 +66,18 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File @abs_top_srcdir@/release/bitcoin-qt.exe
+    File @abs_top_srcdir@/release/hydracoin-qt.exe
     File /oname=COPYING.txt @abs_top_srcdir@/COPYING
     File /oname=readme.txt @abs_top_srcdir@/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File @abs_top_srcdir@/release/bitcoind.exe
+    File @abs_top_srcdir@/release/hydracoind.exe
     SetOutPath $INSTDIR\src
     File /r @abs_top_srcdir@/@PACKAGE@-@VERSION@/src\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
-    # Remove old wxwidgets-based-bitcoin executable and locales:
-    Delete /REBOOTOK $INSTDIR\bitcoin.exe
+    # Remove old wxwidgets-based-hydracoin executable and locales:
+    Delete /REBOOTOK $INSTDIR\hydracoin.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -87,7 +87,7 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Bitcoin.lnk" $INSTDIR\bitcoin-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Bitcoin.lnk" $INSTDIR\hydracoin-qt.exe
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Bitcoin.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -98,10 +98,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "bitcoin" "URL Protocol" ""
-    WriteRegStr HKCR "bitcoin" "" "URL:Bitcoin"
-    WriteRegStr HKCR "bitcoin\DefaultIcon" "" $INSTDIR\bitcoin-qt.exe
-    WriteRegStr HKCR "bitcoin\shell\open\command" "" '"$INSTDIR\bitcoin-qt.exe" "%1"'
+    WriteRegStr HKCR "hydracoin" "URL Protocol" ""
+    WriteRegStr HKCR "hydracoin" "" "URL:Bitcoin"
+    WriteRegStr HKCR "hydracoin\DefaultIcon" "" $INSTDIR\hydracoin-qt.exe
+    WriteRegStr HKCR "hydracoin\shell\open\command" "" '"$INSTDIR\hydracoin-qt.exe" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -119,7 +119,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\bitcoin-qt.exe
+    Delete /REBOOTOK $INSTDIR\hydracoin-qt.exe
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -139,7 +139,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "bitcoin"
+    DeleteRegKey HKCR "hydracoin"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0

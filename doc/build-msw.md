@@ -76,6 +76,6 @@ Bitcoin
 -------
 DOS prompt:
 
-	cd \bitcoin\src
+	cd \hydracoin\src
 	mingw32-make -f makefile.mingw
-	strip bitcoind.exe
+	strip hydracoind.exe

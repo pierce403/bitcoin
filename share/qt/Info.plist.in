@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
   <key>CFBundleIconFile</key>
-  <string>bitcoin.icns</string>
+  <string>hydracoin.icns</string>
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>CFBundleGetInfoString</key>
@@ -17,7 +17,7 @@
   <key>CFBundleExecutable</key>
   <string>Bitcoin-Qt</string>
   <key>CFBundleIdentifier</key>
-  <string>org.bitcoinfoundation.Bitcoin-Qt</string>
+  <string>org.hydracoinfoundation.Bitcoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -25,10 +25,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.bitcoin.BitcoinPayment</string>
+      <string>org.hydracoin.BitcoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>bitcoin</string>
+        <string>hydracoin</string>
       </array>
     </dict>
   </array>
@@ -37,7 +37,7 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.bitcoin.paymentrequest</string>
+      <string>org.hydracoin.paymentrequest</string>
       <key>UTTypeDescription</key>
       <string>Bitcoin payment request</string>
       <key>UTTypeConformsTo</key>
@@ -47,10 +47,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-bitcoin-payment-request</string>
+        <string>application/x-hydracoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>bitcoinpaymentrequest</string>
+          <string>hydracoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -63,7 +63,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.bitcoin.paymentrequest</string>
+        <string>org.hydracoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

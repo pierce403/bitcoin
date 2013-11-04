@@ -274,8 +274,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista bitcoinide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista hydracoinide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -322,7 +322,7 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Signeeri &amp;sõnum</translation>
     </message>
@@ -673,7 +673,7 @@ Aadress: %4⏎</translation>
         <translation>Rahakott on &lt;b&gt;krüpteeritud&lt;/b&gt; ning hetkel &lt;b&gt;suletud&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>Ilmnes kriitiline tõrge. Bitcoin suletakse turvakaalutluste tõttu.</translation>
     </message>
@@ -1163,14 +1163,14 @@ Aadress: %4⏎</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation>Bitcoin ei käivitu: vajuta-maksa toiming</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation type="unfinished"/>
@@ -2298,9 +2298,9 @@ Aadress: %4⏎</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoini versioon</translation>
     </message>
@@ -2311,8 +2311,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Saada käsklus -serverile või bitcoindile</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Saada käsklus -serverile või hydracoindile</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2331,13 +2331,13 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Täpsusta sätete fail (vaikimisi: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Täpsusta sätete fail (vaikimisi: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Täpsusta PID fail (vaikimisi: bitcoin.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Täpsusta PID fail (vaikimisi: hydracoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2414,7 +2414,7 @@ Aadress: %4⏎</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2425,7 +2425,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, sul tuleb rpcpassword määrata seadete failis:
 %s
 Soovitatav on kasutada järgmist juhuslikku parooli:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (seda parooli ei pea meeles pidama)
 Kasutajanimi ning parool EI TOHI kattuda.

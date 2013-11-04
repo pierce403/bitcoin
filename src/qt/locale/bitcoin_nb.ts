@@ -274,8 +274,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin vil nå lukkes for å fullføre krypteringsprosessen. Husk at kryptering av lommeboken ikke fullt ut kan beskytte dine bitcoins fra å bli stjålet om skadevare infiserer datamaskinen.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin vil nå lukkes for å fullføre krypteringsprosessen. Husk at kryptering av lommeboken ikke fullt ut kan beskytte dine hydracoins fra å bli stjålet om skadevare infiserer datamaskinen.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -322,7 +322,7 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Signer &amp;melding...</translation>
     </message>
@@ -674,7 +674,7 @@ Adresse: %4
         <translation>Lommeboken er &lt;b&gt;kryptert&lt;/b&gt; og for tiden &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>En fatal feil har inntruffet. Det er ikke trygt å fortsette og Bitcoin må derfor avslutte.</translation>
     </message>
@@ -1026,7 +1026,7 @@ Adresse: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av bitcoins.</translation>
+        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av hydracoins.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1165,14 +1165,14 @@ Adresse: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation>Kan ikke starte Bitcoin: klikk-og-betal håndterer</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -1456,7 +1456,7 @@ Adresse: %4
     <message>
         <location line="+6"/>
         <source>Confirm send coins</source>
-        <translation>Bekreft sending av bitcoins</translation>
+        <translation>Bekreft sending av hydracoins</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1501,7 +1501,7 @@ Adresse: %4
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Feil: Transaksjonen ble avvist. Dette kan skje om noe av beløpet allerede var brukt, f.eks. hvis du kopierte wallet.dat og noen bitcoins ble brukt i kopien men ikke ble markert som brukt her.</translation>
+        <translation>Feil: Transaksjonen ble avvist. Dette kan skje om noe av beløpet allerede var brukt, f.eks. hvis du kopierte wallet.dat og noen hydracoins ble brukt i kopien men ikke ble markert som brukt her.</translation>
     </message>
 </context>
 <context>
@@ -1900,7 +1900,7 @@ Adresse: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Genererte bitcoins må modnes 120 blokker før de kan brukes. Da du genererte denne blokken ble den kringkastet til nettverket for å legges til i blokkjeden. Hvis den ikke kommer inn i kjeden får den tilstanden &quot;ikke akseptert&quot; og vil ikke kunne brukes. Dette skjer noen ganger hvis en annen node genererer en blokk noen sekunder fra din.</translation>
+        <translation>Genererte hydracoins må modnes 120 blokker før de kan brukes. Da du genererte denne blokken ble den kringkastet til nettverket for å legges til i blokkjeden. Hvis den ikke kommer inn i kjeden får den tilstanden &quot;ikke akseptert&quot; og vil ikke kunne brukes. Dette skjer noen ganger hvis en annen node genererer en blokk noen sekunder fra din.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2300,9 +2300,9 @@ Adresse: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoin versjon</translation>
     </message>
@@ -2313,8 +2313,8 @@ Adresse: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Send kommando til -server eller bitcoind</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>Send kommando til -server eller hydracoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2333,13 +2333,13 @@ Adresse: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Angi konfigurasjonsfil (standardverdi: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Angi konfigurasjonsfil (standardverdi: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Angi pid-fil (standardverdi: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Angi pid-fil (standardverdi: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2416,7 +2416,7 @@ Adresse: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2427,7 +2427,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, du må angi rpcpassord i konfigurasjonsfilen.
 %s
 Det anbefales at du bruker det følgende tilfeldige passordet:
-rpcbruker=bitcoinrpc
+rpcbruker=hydracoinrpc
 rpcpassord=%s
 (du behøver ikke å huske passordet)
 Brukernavnet og passordet MÅ IKKE være like.
@@ -2618,7 +2618,7 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>Feil ved skriving av bitcoin database</translation>
+        <translation>Feil ved skriving av hydracoin database</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2638,7 +2638,7 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>Generér bitcoins (standardverdi: 0)</translation>
+        <translation>Generér hydracoins (standardverdi: 0)</translation>
     </message>
     <message>
         <location line="+2"/>

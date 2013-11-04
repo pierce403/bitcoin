@@ -1,7 +1,7 @@
 #include "sendcoinsdialog.h"
 #include "ui_sendcoinsdialog.h"
 
-#include "bitcoinunits.h"
+#include "hydracoinunits.h"
 #include "optionsmodel.h"
 #include "sendcoinsentry.h"
 #include "guiutil.h"

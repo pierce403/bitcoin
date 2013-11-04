@@ -1,5 +1,5 @@
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
+#include "hydracoin-config.h"
 #endif
 
 #include "addressbookpage.h"
@@ -7,7 +7,7 @@
 
 #include "addresstablemodel.h"
 #include "optionsmodel.h"
-#include "bitcoingui.h"
+#include "hydracoingui.h"
 #include "editaddressdialog.h"
 #include "csvmodelwriter.h"
 #include "guiutil.h"

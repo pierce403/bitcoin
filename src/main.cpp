@@ -499,7 +499,7 @@ bool IsFinalTx(const CTransaction &tx, int nBlockHeight, int64 nBlockTime)
     return true;
 }
 
-/** Amount of bitcoins spent by the transaction.
+/** Amount of hydracoins spent by the transaction.
     @return sum of all outputs (note: does not include fees)
  */
 int64 GetValueOut(const CTransaction& tx)
@@ -1680,7 +1680,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("bitcoin-scriptch");
+    RenameThread("hydracoin-scriptch");
     scriptcheckqueue.Thread();
 }
 

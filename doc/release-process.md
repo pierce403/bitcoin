@@ -2,14 +2,14 @@ Release Process
 ====================
 
 * update translations (ping wumpus, Diapolo or tcatm on IRC)
-* see https://github.com/bitcoin/bitcoin/blob/master/doc/translation_process.md#syncing-with-transifex
+* see https://github.com/hydracoin/hydracoin/blob/master/doc/translation_process.md#syncing-with-transifex
 
 * * *
 
 ###update (commit) version in sources
 
 
-	bitcoin-qt.pro
+	hydracoin-qt.pro
 	contrib/verifysfbinaries/verify.sh
 	doc/README*
 	share/setup.nsi
@@ -27,11 +27,11 @@ Release Process
 
 ##perform gitian builds
 
- From a directory containing the bitcoin source, gitian-builder and gitian.sigs
+ From a directory containing the hydracoin source, gitian-builder and gitian.sigs
   
 	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
 	export VERSION=(new version, e.g. 0.8.0)
-	pushd ./bitcoin
+	pushd ./hydracoin
 	git checkout v${VERSION}
 	popd
 	pushd ./gitian-builder
@@ -51,57 +51,57 @@ Release Process
 	wget 'https://download.qt-project.org/archive/qt/4.8/4.8.3/qt-everywhere-opensource-src-4.8.3.tar.gz'
 	wget 'https://protobuf.googlecode.com/files/protobuf-2.5.0.tar.bz2'
 	cd ..
-	./bin/gbuild ../bitcoin/contrib/gitian-descriptors/boost-win32.yml
+	./bin/gbuild ../hydracoin/contrib/gitian-descriptors/boost-win32.yml
 	mv build/out/boost-win32-*.zip inputs/
-	./bin/gbuild ../bitcoin/contrib/gitian-descriptors/deps-win32.yml
-	mv build/out/bitcoin-deps-*.zip inputs/
-	./bin/gbuild ../bitcoin/contrib/gitian-descriptors/qt-win32.yml
+	./bin/gbuild ../hydracoin/contrib/gitian-descriptors/deps-win32.yml
+	mv build/out/hydracoin-deps-*.zip inputs/
+	./bin/gbuild ../hydracoin/contrib/gitian-descriptors/qt-win32.yml
 	mv build/out/qt-win32-*.zip inputs/
-	./bin/gbuild ../bitcoin/contrib/gitian-descriptors/protobuf-win32.yml
+	./bin/gbuild ../hydracoin/contrib/gitian-descriptors/protobuf-win32.yml
 	mv build/out/protobuf-win32-*.zip inputs/
 
- Build bitcoind and bitcoin-qt on Linux32, Linux64, and Win32:
+ Build hydracoind and hydracoin-qt on Linux32, Linux64, and Win32:
   
-	./bin/gbuild --commit bitcoin=v${VERSION} ../bitcoin/contrib/gitian-descriptors/gitian.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs/ ../bitcoin/contrib/gitian-descriptors/gitian.yml
+	./bin/gbuild --commit hydracoin=v${VERSION} ../hydracoin/contrib/gitian-descriptors/gitian.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs/ ../hydracoin/contrib/gitian-descriptors/gitian.yml
 	pushd build/out
-	zip -r bitcoin-${VERSION}-linux-gitian.zip *
-	mv bitcoin-${VERSION}-linux-gitian.zip ../../../
+	zip -r hydracoin-${VERSION}-linux-gitian.zip *
+	mv hydracoin-${VERSION}-linux-gitian.zip ../../../
 	popd
-	./bin/gbuild --commit bitcoin=v${VERSION} ../bitcoin/contrib/gitian-descriptors/gitian-win32.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win32 --destination ../gitian.sigs/ ../bitcoin/contrib/gitian-descriptors/gitian-win32.yml
+	./bin/gbuild --commit hydracoin=v${VERSION} ../hydracoin/contrib/gitian-descriptors/gitian-win32.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win32 --destination ../gitian.sigs/ ../hydracoin/contrib/gitian-descriptors/gitian-win32.yml
 	pushd build/out
-	zip -r bitcoin-${VERSION}-win32-gitian.zip *
-	mv bitcoin-${VERSION}-win32-gitian.zip ../../../
+	zip -r hydracoin-${VERSION}-win32-gitian.zip *
+	mv hydracoin-${VERSION}-win32-gitian.zip ../../../
 	popd
 	popd
 
   Build output expected:
 
-  1. linux 32-bit and 64-bit binaries + source (bitcoin-${VERSION}-linux-gitian.zip)
-  2. windows 32-bit binary, installer + source (bitcoin-${VERSION}-win32-gitian.zip)
+  1. linux 32-bit and 64-bit binaries + source (hydracoin-${VERSION}-linux-gitian.zip)
+  2. windows 32-bit binary, installer + source (hydracoin-${VERSION}-win32-gitian.zip)
   3. Gitian signatures (in gitian.sigs/${VERSION}[-win32]/(your gitian key)/
 
 repackage gitian builds for release as stand-alone zip/tar/installer exe
 
 **Linux .tar.gz:**
 
-	unzip bitcoin-${VERSION}-linux-gitian.zip -d bitcoin-${VERSION}-linux
-	tar czvf bitcoin-${VERSION}-linux.tar.gz bitcoin-${VERSION}-linux
-	rm -rf bitcoin-${VERSION}-linux
+	unzip hydracoin-${VERSION}-linux-gitian.zip -d hydracoin-${VERSION}-linux
+	tar czvf hydracoin-${VERSION}-linux.tar.gz hydracoin-${VERSION}-linux
+	rm -rf hydracoin-${VERSION}-linux
 
 **Windows .zip and setup.exe:**
 
-	unzip bitcoin-${VERSION}-win32-gitian.zip -d bitcoin-${VERSION}-win32
-	mv bitcoin-${VERSION}-win32/bitcoin-*-setup.exe .
-	zip -r bitcoin-${VERSION}-win32.zip bitcoin-${VERSION}-win32
-	rm -rf bitcoin-${VERSION}-win32
+	unzip hydracoin-${VERSION}-win32-gitian.zip -d hydracoin-${VERSION}-win32
+	mv hydracoin-${VERSION}-win32/hydracoin-*-setup.exe .
+	zip -r hydracoin-${VERSION}-win32.zip hydracoin-${VERSION}-win32
+	rm -rf hydracoin-${VERSION}-win32
 
 **Perform Mac build:**
 
   OSX binaries are created by Gavin Andresen on a 32-bit, OSX 10.6 machine.
 
-	qmake RELEASE=1 USE_UPNP=1 USE_QRCODE=1 bitcoin-qt.pro
+	qmake RELEASE=1 USE_UPNP=1 USE_QRCODE=1 hydracoin-qt.pro
 	make
 	export QTDIR=/opt/local/share/qt4  # needed to find translations/qt_*.qm files
 	T=$(contrib/qt_translations.py $QTDIR/translations src/qt/locale)
@@ -119,14 +119,14 @@ repackage gitian builds for release as stand-alone zip/tar/installer exe
 
 * create SHA256SUMS for builds, and PGP-sign it
 
-* update bitcoin.org version
+* update hydracoin.org version
   make sure all OS download links go to the right versions
 
 * update forum version
 
 * update wiki download links
 
-* update wiki changelog: [https://en.bitcoin.it/wiki/Changelog](https://en.bitcoin.it/wiki/Changelog)
+* update wiki changelog: [https://en.hydracoin.it/wiki/Changelog](https://en.hydracoin.it/wiki/Changelog)
 
 Commit your signature to gitian.sigs:
 
@@ -141,32 +141,32 @@ Commit your signature to gitian.sigs:
 
 ### After 3 or more people have gitian-built, repackage gitian-signed zips:
 
-From a directory containing bitcoin source, gitian.sigs and gitian zips
+From a directory containing hydracoin source, gitian.sigs and gitian zips
 
 	export VERSION=(new version, e.g. 0.8.0)
-	mkdir bitcoin-${VERSION}-linux-gitian
-	pushd bitcoin-${VERSION}-linux-gitian
-	unzip ../bitcoin-${VERSION}-linux-gitian.zip
+	mkdir hydracoin-${VERSION}-linux-gitian
+	pushd hydracoin-${VERSION}-linux-gitian
+	unzip ../hydracoin-${VERSION}-linux-gitian.zip
 	mkdir gitian
-	cp ../bitcoin/contrib/gitian-downloader/*.pgp ./gitian/
+	cp ../hydracoin/contrib/gitian-downloader/*.pgp ./gitian/
 	for signer in $(ls ../gitian.sigs/${VERSION}/); do
-	 cp ../gitian.sigs/${VERSION}/${signer}/bitcoin-build.assert ./gitian/${signer}-build.assert
-	 cp ../gitian.sigs/${VERSION}/${signer}/bitcoin-build.assert.sig ./gitian/${signer}-build.assert.sig
+	 cp ../gitian.sigs/${VERSION}/${signer}/hydracoin-build.assert ./gitian/${signer}-build.assert
+	 cp ../gitian.sigs/${VERSION}/${signer}/hydracoin-build.assert.sig ./gitian/${signer}-build.assert.sig
 	done
-	zip -r bitcoin-${VERSION}-linux-gitian.zip *
-	cp bitcoin-${VERSION}-linux-gitian.zip ../
+	zip -r hydracoin-${VERSION}-linux-gitian.zip *
+	cp hydracoin-${VERSION}-linux-gitian.zip ../
 	popd
-	mkdir bitcoin-${VERSION}-win32-gitian
-	pushd bitcoin-${VERSION}-win32-gitian
-	unzip ../bitcoin-${VERSION}-win32-gitian.zip
+	mkdir hydracoin-${VERSION}-win32-gitian
+	pushd hydracoin-${VERSION}-win32-gitian
+	unzip ../hydracoin-${VERSION}-win32-gitian.zip
 	mkdir gitian
-	cp ../bitcoin/contrib/gitian-downloader/*.pgp ./gitian/
+	cp ../hydracoin/contrib/gitian-downloader/*.pgp ./gitian/
 	for signer in $(ls ../gitian.sigs/${VERSION}-win32/); do
-	 cp ../gitian.sigs/${VERSION}-win32/${signer}/bitcoin-build.assert ./gitian/${signer}-build.assert
-	 cp ../gitian.sigs/${VERSION}-win32/${signer}/bitcoin-build.assert.sig ./gitian/${signer}-build.assert.sig
+	 cp ../gitian.sigs/${VERSION}-win32/${signer}/hydracoin-build.assert ./gitian/${signer}-build.assert
+	 cp ../gitian.sigs/${VERSION}-win32/${signer}/hydracoin-build.assert.sig ./gitian/${signer}-build.assert.sig
 	done
-	zip -r bitcoin-${VERSION}-win32-gitian.zip *
-	cp bitcoin-${VERSION}-win32-gitian.zip ../
+	zip -r hydracoin-${VERSION}-win32-gitian.zip *
+	cp hydracoin-${VERSION}-win32-gitian.zip ../
 	popd
 
 - Upload gitian zips to SourceForge

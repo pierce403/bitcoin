@@ -274,7 +274,7 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin は暗号化プロセスを終了するために今すぐ終了します。あなたのコンピュータがマルウェアに感染してコインを盗まれることもあるので、暗号化してもあなたのウォレットを完全に保護できないことを覚えていてください。</translation>
     </message>
     <message>
@@ -322,7 +322,7 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>メッセージの署名... (&amp;m)</translation>
     </message>
@@ -674,7 +674,7 @@ Address: %4
         <translation>ウォレットは&lt;b&gt;暗号化されて、ロックされています&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>致命的なエラーが発生しました。Bitcoin は安全に継続することができず終了するでしょう。
 </translation>
@@ -1165,14 +1165,14 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
         <translation>Bitcoin を起動できません: click-to-pay handler</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -2300,9 +2300,9 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Bitcoin Bertsio</translation>
     </message>
@@ -2313,8 +2313,8 @@ Address: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>コマンドを -server あるいは bitcoind に送信</translation>
+        <source>Send command to -server or hydracoind</source>
+        <translation>コマンドを -server あるいは hydracoind に送信</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2333,13 +2333,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>設定ファイルの指定 (初期値: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>設定ファイルの指定 (初期値: hydracoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>pid ファイルの指定 (初期値: bitcoind.pid)</translation>
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>pid ファイルの指定 (初期値: hydracoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2416,7 +2416,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2427,7 +2427,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, rpcpassword を設定ファイルで設定してください:
 %s
 下記のランダムなパスワードの使用を推奨します:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (このパスワードを覚える必要はありません)
 ユーザー名とパスワードが同じであってはいけません。

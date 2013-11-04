@@ -122,7 +122,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono i tuoi indirizzi Bitcoin per inviare pagamenti. Controlla sempre l&apos;importo e l&apos;indirizzo del beneficiario prima di inviare  bitcoin</translation>
+        <translation>Questi sono i tuoi indirizzi Bitcoin per inviare pagamenti. Controlla sempre l&apos;importo e l&apos;indirizzo del beneficiario prima di inviare  hydracoin</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -274,7 +274,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hydracoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin verrà ora chiuso per finire il processo di crittazione. Ricorda che criptare il tuo portamonete non può fornire una protezione totale contro furti causati da malware che dovessero infettare il tuo computer.</translation>
     </message>
     <message>
@@ -322,7 +322,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+254"/>
+        <location filename="../hydracoingui.cpp" line="+254"/>
         <source>Sign &amp;message...</source>
         <translation>Firma il &amp;messaggio...</translation>
     </message>
@@ -419,12 +419,12 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <message>
         <location line="-319"/>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Invia monete ad un indirizzo bitcoin</translation>
+        <translation>Invia monete ad un indirizzo hydracoin</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Modifica configurazione opzioni per bitcoin</translation>
+        <translation>Modifica configurazione opzioni per hydracoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -675,7 +675,7 @@ Indirizzo: %4
         <translation>Il portamonete è &lt;b&gt;cifrato&lt;/b&gt; e attualmente &lt;b&gt;bloccato&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
+        <location filename="../hydracoin.cpp" line="+110"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>Riscontrato un errore irreversibile. Bitcoin non può più continuare in sicurezza e verrà terminato.</translation>
     </message>
@@ -743,7 +743,7 @@ Indirizzo: %4
     <message>
         <location line="-5"/>
         <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>L&apos;indirizzo inserito &quot;%1&quot; non è un indirizzo bitcoin valido.</translation>
+        <translation>L&apos;indirizzo inserito &quot;%1&quot; non è un indirizzo hydracoin valido.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1166,14 +1166,14 @@ Indirizzo: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+108"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Impossibile avviare bitcoin: gestore click-to-pay</translation>
+        <source>Cannot start hydracoin: click-to-pay handler</source>
+        <translation>Impossibile avviare hydracoin: gestore click-to-pay</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../hydracoin.cpp" line="+92"/>
         <location filename="../intro.cpp" line="-32"/>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
@@ -1457,7 +1457,7 @@ Indirizzo: %4
     <message>
         <location line="+6"/>
         <source>Confirm send coins</source>
-        <translation>Conferma la spedizione di bitcoin</translation>
+        <translation>Conferma la spedizione di hydracoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1502,7 +1502,7 @@ Indirizzo: %4
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni bitcoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i bitcoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
+        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni hydracoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i hydracoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
     </message>
 </context>
 <context>
@@ -1713,7 +1713,7 @@ Indirizzo: %4
         <location line="-81"/>
         <location line="+81"/>
         <source>The entered address does not refer to a key.</source>
-        <translation>L&apos;indirizzo bitcoin inserito non è associato a nessuna chiave.</translation>
+        <translation>L&apos;indirizzo hydracoin inserito non è associato a nessuna chiave.</translation>
     </message>
     <message>
         <location line="-73"/>
@@ -1901,7 +1901,7 @@ Indirizzo: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Bisogna attendere 120 blocchi prima di spendere I bitcoin generati. Quando è stato generato questo blocco, è stato trasmesso alla rete per aggiungerlo alla catena di blocchi. Se non riesce a entrare nella catena, verrà modificato in &quot;non accettato&quot; e non sarà spendibile. Questo può accadere a volte, se un altro nodo genera un blocco entro pochi secondi del tuo.</translation>
+        <translation>Bisogna attendere 120 blocchi prima di spendere I hydracoin generati. Quando è stato generato questo blocco, è stato trasmesso alla rete per aggiungerlo alla catena di blocchi. Se non riesce a entrare nella catena, verrà modificato in &quot;non accettato&quot; e non sarà spendibile. Questo può accadere a volte, se un altro nodo genera un blocco entro pochi secondi del tuo.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2301,9 +2301,9 @@ Indirizzo: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>hydracoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+98"/>
+        <location filename="../hydracoinstrings.cpp" line="+98"/>
         <source>Bitcoin version</source>
         <translation>Versione di Bitcoin</translation>
     </message>
@@ -2314,8 +2314,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="-30"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Manda il comando a -server o bitcoind
+        <source>Send command to -server or hydracoind</source>
+        <translation>Manda il comando a -server o hydracoind
 </translation>
     </message>
     <message>
@@ -2338,14 +2338,14 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specifica il file di configurazione (di default: bitcoin.conf)
+        <source>Specify configuration file (default: hydracoin.conf)</source>
+        <translation>Specifica il file di configurazione (di default: hydracoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specifica il file pid (default: bitcoind.pid)
+        <source>Specify pid file (default: hydracoind.pid)</source>
+        <translation>Specifica il file pid (default: hydracoind.pid)
 </translation>
     </message>
     <message>
@@ -2427,7 +2427,7 @@ Indirizzo: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2438,7 +2438,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, devi impostare una rpcpassword nel file di configurazione:
 %s
 Si raccomanda l&apos;uso della seguente password generata casualmente:
-rpcuser=bitcoinrpc
+rpcuser=hydracoinrpc
 rpcpassword=%s
 (non serve ricordare questa password)
 Il nome utente e la password NON DEVONO essere uguali.
@@ -2470,7 +2470,7 @@ per esempio: alertnotify=echo %%s | mail -s &quot;Allarme Bitcoin&quot; admin@fo
     <message>
         <location line="+4"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni bitcoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i bitcoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
+        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni hydracoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i hydracoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2630,7 +2630,7 @@ per esempio: alertnotify=echo %%s | mail -s &quot;Allarme Bitcoin&quot; admin@fo
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>Scrittura nel database dei bitcoin fallita</translation>
+        <translation>Scrittura nel database dei hydracoin fallita</translation>
     </message>
     <message>
         <location line="+1"/>

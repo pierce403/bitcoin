@@ -1,10 +1,10 @@
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
+#include "hydracoin-config.h"
 #endif
 
 #include "optionsmodel.h"
 
-#include "bitcoinunits.h"
+#include "hydracoinunits.h"
 #include "init.h"
 #include "core.h"
 #include "wallet.h"
